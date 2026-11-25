@@ -19,14 +19,15 @@ llm:
       base_url: https://api.groq.com/openai/v1
       key_env: GROQ_API_KEY
       models:
-        - id: meta-llama/llama-4-maverick-17b-128e-instruct
-        - id: llama-3.3-70b-versatile
+        - id: openai/gpt-oss-120b        # test 25. 11. 2026.: dobar hrvatski, brz; ne prima slike
           vision: false
+        # qwen/qwen3.8-27b – izbačen: gramatičke greške u hrvatskom
     - name: openrouter                   # besplatni modeli s nastavkom ":free": https://openrouter.ai/keys
       base_url: https://openrouter.ai/api/v1
       key_env: OPENROUTER_API_KEY
       models:
-        - id: meta-llama/llama-4-maverick:free
+        - id: google/gemma-4-31b-it:free # prima slike (rezerva za vision korake); često ograničen
+        # nvidia/nemotron-3.5-super-vl:free – izbačen: miješa srpski ("promenu", "oznažite")
     - name: gemini-lite                  # zadnja rezerva: lakši Gemini modeli (veća kvota, slabiji tekst)
       base_url: https://generativelanguage.googleapis.com/v1beta/openai
       key_env: GEMINI_API_KEY
@@ -39,11 +40,10 @@ llm:
 
 slike:
   # Generator AI pozadinskih scena (python -m recept scene):
-  #   rucno        – zapiše promptove u ai_slike/PROMPTOVI.md za ChatGPT / Gemini aplikaciju
-  #   huggingface  – FLUX preko Hugging Face Inference Providers (HF_TOKEN, besplatni mjesečni krediti)
-  #   pollinations – bez ključa, ali niža rezolucija i vodeni žig (samo za brzi test)
+  #   rucno        – zapiše promptove u ai_slike/PROMPTOVI.md za ChatGPT / Gemini aplikaciju (preporučeno)
+  #   pollinations – automatski i bez ključa, ali niža rezolucija i vodeni žig (samo za test)
+  # Hugging Face isproban i odbačen: besplatni modeli za slike ukinuti (410), ostali traže kredite (402).
   generator: rucno
-  huggingface_model: black-forest-labs/FLUX.1-schnell
 
 provjera:
   automatski_popravak: true   # primijeni ispravke AI kritičara (uz provjeru brojki) i ponovno renderiraj

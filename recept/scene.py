@@ -7,8 +7,10 @@ ambalaže – proizvod uvijek dolazi iz originalne fotografije).
 
 Izlaz: ``<run>/ai_slike/objava{N}_kadar{M}.png``; render ih koristi kao pozadinu kadra.
 
-Generatori: ``rucno`` (PROMPTOVI.md za ChatGPT/Gemini aplikaciju), ``huggingface``
-(FLUX, HF_TOKEN), ``pollinations`` (bez ključa, niža kvaliteta).
+Generatori: ``rucno`` (PROMPTOVI.md za ChatGPT/Gemini aplikaciju – preporučeno) i
+``pollinations`` (automatski, bez ključa, ali niža rezolucija i vodeni žig – samo za test).
+Hugging Face je isproban 25. 11. 2026. i odbačen: besplatni modeli za slike su ukinuti
+(HTTP 410), a preostali traže kupljene kredite (HTTP 402).
 """
 from __future__ import annotations
 
@@ -55,20 +57,6 @@ def _save(img_bytes: bytes, out: Path, size: tuple[int, int]):
     im.crop((left, top, left + W, top + H)).save(out, optimize=True)
 
 
-def huggingface(prompt: str, size, model: str) -> bytes:
-    token = os.environ.get("HF_TOKEN")
-    if not token:
-        raise SystemExit("Za generator 'huggingface' postavi HF_TOKEN (vidi .env.example).")
-    w, h = (size[0] // 16 * 16 * 3 // 4, size[1] // 16 * 16 * 3 // 4)  # manje = brže i jeftinije
-    w, h = w - w % 16, h - h % 16
-    r = requests.post(f"https://router.huggingface.co/hf-inference/models/{model}",
-                      headers={"Authorization": f"Bearer {token}"},
-                      json={"inputs": prompt, "parameters": {"width": w, "height": h}}, timeout=300)
-    if r.status_code != 200 or not r.headers.get("content-type", "").startswith("image/"):
-        raise RuntimeError(f"Hugging Face HTTP {r.status_code}: {r.text[:200]}")
-    return r.content
-
-
 def pollinations(prompt: str, size, seed: int = 7) -> bytes:
     url = (f"https://image.pollinations.ai/prompt/{urllib.parse.quote(prompt)}"
            f"?width={size[0]}&height={size[1]}&seed={seed}&nologo=true")
@@ -100,7 +88,6 @@ def run(run_dir: Path, cfg: dict, generator: str | None = None, overwrite: bool 
             continue
         size = SIZES.get(it.get("format"), SIZES["karusel"])
         t0 = time.time()
-        data = (huggingface(full_prompt(it), size, cfg.get("huggingface_model", "black-forest-labs/FLUX.1-schnell"))
-                if gen == "huggingface" else pollinations(full_prompt(it), size))
+        data = pollinations(full_prompt(it), size)
         _save(data, out, size)
         print(f"  · {out.name} ({gen}, {time.time() - t0:.0f} s)")
