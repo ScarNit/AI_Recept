@@ -70,3 +70,19 @@ Nakon ovih dorada ponovno su pokrenute determinističke provjere (`recept/provje
 objave prolaze bez grešaka i upozorenja. Riječi „želuc”, „lakša probava” i slične dodane su na
 popis rizičnih izraza, a pravilo o probavi i hrvatskom formatu cijena dodano je u
 `prompts/04_izrada.md`, tako da sljedeće pokretanje te greške hvata automatski.
+
+## Brif: ti-forma → vi-forma (nakon analize snimki Instagrama, 25. 11. 2026.)
+
+- **Ulaz:** dvije snimke zaslona profila @gymbeamhr (`brief/instagram/01_profil_vrh.png`,
+  `02_mreza_objava.png`), dodane u brif kao `instagram_reference`.
+- **Opažanje:** brend se obraća u množini – „Pratite nas za fitness inspiraciju” (bio),
+  „Uživajte u besplatnoj dostavi s BOX NOW” (objava), web „ne čekajte posljednji trenutak”.
+  Izvorni demonstracijski brif tražio je ti-formu, pa su prve verzije objava bile u ti-formi.
+- **Odluka:** brif ispravljen na vi-formu; sustavski prompt više ne propisuje ti-formu nego
+  oblik obraćanja preuzima iz analize; prompt analize sad izričito traži oblik obraćanja i
+  „nesuglasja s brifom”. Dorade prve verzije sačuvane su u `dorade_v1_ti_forma.yaml`.
+- **Ostala opažanja sa snimki:** feed čine gotovo isključivo reelsi sa stvarnim osobama
+  (influenceri, kreatori, kuhinja/teretana), odjeća, unboxing i povremeni AI-stilizirani
+  vizuali; istaknute priče: Zajednica, Novosti, Članci, Recepti, Outfiti. Statični karusel i
+  story naše demonstracije zato su namjerno dopuna (edukacija za spremanje – tema „Članci”),
+  a reels s osobama ostaje prijedlog za sljedeću verziju recepta.

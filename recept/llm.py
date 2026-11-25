@@ -130,8 +130,9 @@ class LLM:
                     continue
                 msg = _err_msg(r)
                 errors.append(f"{model} HTTP {r.status_code}: {msg[:160]}")
-                print(f"  ! {model} HTTP {r.status_code}: {msg[:100]}", file=sys.stderr)
-                if r.status_code in (400, 401, 403, 404) or (r.status_code == 429 and "per day" in msg.lower()):
+                print(f"  ! {model} HTTP {r.status_code}: {msg[:70]}{msg[msg.find(' [kvota'):] if ' [kvota' in msg else ''}",
+                      file=sys.stderr)
+                if r.status_code in (400, 401, 403, 404) or (r.status_code == 429 and ("per day" in msg.lower() or "PerDay" in msg)):
                     dead.add(model)  # model nedostupan ili dnevna kvota potrošena
             if len(dead) == len(self.models):
                 break
@@ -187,9 +188,21 @@ def parse_json(text: str):
     raise ValueError("u odgovoru nema JSON objekta")
 
 
-def _data_uri(path: Path) -> str:
-    mime = mimetypes.guess_type(str(path))[0] or "image/png"
-    return f"data:{mime};base64," + base64.b64encode(Path(path).read_bytes()).decode()
+def _data_uri(path: Path, max_side: int = 1280) -> str:
+    """Slika kao data URI; velike slike smanjuju se na max_side px (JPEG) da bi zahtjev
+    stao u besplatnu minutnu kvotu ulaznih tokena."""
+    import io
+
+    from PIL import Image
+    im = Image.open(path)
+    if max(im.size) <= max_side and Path(path).stat().st_size < 600_000:
+        mime = mimetypes.guess_type(str(path))[0] or "image/png"
+        return f"data:{mime};base64," + base64.b64encode(Path(path).read_bytes()).decode()
+    im = im.convert("RGB")
+    im.thumbnail((max_side, max_side))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=85)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
 def _err_msg(r: requests.Response) -> str:
@@ -197,6 +210,8 @@ def _err_msg(r: requests.Response) -> str:
         d = r.json()
         if isinstance(d, list):
             d = d[0]
-        return d.get("error", {}).get("message", r.text)
+        err = d.get("error", {})
+        quotas = [v.get("quotaId", "") for x in err.get("details", []) for v in x.get("violations", [])]
+        return err.get("message", r.text) + (f" [kvota: {', '.join(quotas)}]" if quotas else "")
     except Exception:
         return r.text

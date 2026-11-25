@@ -371,6 +371,13 @@ def analysis_md(a: dict, brief: dict, sources: dict) -> str:
     L += [f"- {x.get('tvrdnja')} — <{x.get('izvor')}>" for x in a.get("provjereni_podaci", [])]
     L += ["", "## Pretpostavke (nije provjereno)"]
     L += [f"- {x.get('tvrdnja')} — *{x.get('zasto')}*" for x in a.get("pretpostavke", [])]
+    ob = a.get("oblik_obracanja") or {}
+    if ob:
+        L += ["", "## Oblik obraćanja", f"**{ob.get('oblik')}** – " + " / ".join(ob.get("primjeri", []))]
+    if a.get("nesuglasja_s_brifom"):
+        L += ["", "## Nesuglasja s brifom"]
+        L += [f"- brif: {x.get('brif')} · opaženo: {x.get('opazeno')} · preporuka: {x.get('preporuka')}"
+              for x in a["nesuglasja_s_brifom"]]
     L += ["", "## Nedostupni izvori", *[f"- {x}" for x in a.get("nedostupni_izvori", [])], "",
           "## Prilike", *[f"- {x}" for x in a.get("prilike", [])], "",
           "## Rizici", *[f"- {x}" for x in a.get("rizici", [])], "",

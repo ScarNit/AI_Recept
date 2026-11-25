@@ -2,7 +2,7 @@
   "proizvodi": [
     {
       "url": "https://gymbeam.hr/advent-kalendar-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "Adventski kalendar - GymBeam",
       "kategorija": "Top ponude > Pokloni > Poklon paketi > Adventski kalendar - GymBeam",
       "brend": "GymBeam",
@@ -65,7 +65,7 @@
     },
     {
       "url": "https://gymbeam.hr/protein-just-whey-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "Just Whey Grass-Fed Protein – GymBeam",
       "kategorija": "Proteini > Whey protein sirutke > Proteinski koncentrati > Just Whey Grass-Fed Protein – GymBeam",
       "brend": "GymBeam Retail",
@@ -326,7 +326,7 @@
     },
     {
       "url": "https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "Proteinska pločica MoiMüv - GymBeam",
       "kategorija": "Hrana > Snackovi > Proteinske pločice > Proteinska pločica MoiMüv - GymBeam",
       "brend": "GymBeam Food",
@@ -401,7 +401,7 @@
     },
     {
       "url": "https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "Proteinski namaz MoiMüv - GymBeam",
       "kategorija": "Hrana > Maslaci od orašastih plodova > Proteinski namazi od orašastih plodova > Proteinski namaz MoiMüv - GymBeam",
       "brend": "GymBeam Food",
@@ -468,7 +468,7 @@
     },
     {
       "url": "https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "25g Protein Milkshake - GymBeam",
       "kategorija": "Proteini > Zamjenski obroci > Ready-to-drink proteinski napitci > 25g Protein Milkshake - GymBeam",
       "brend": "GymBeam Retail",
@@ -537,7 +537,7 @@
     },
     {
       "url": "https://gymbeam.hr/proteinski-chips-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "Proteinski čips - GymBeam",
       "kategorija": "Hrana > Snackovi > Proteinski čips i krekeri > Proteinski čips - GymBeam",
       "brend": "GymBeam Retail",
@@ -636,7 +636,7 @@
     },
     {
       "url": "https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html",
-      "dohvaceno": "2026-11-25 19:10",
+      "dohvaceno": "2026-11-25 19:33",
       "naziv": "Maslac od kikirikija - GymBeam",
       "kategorija": "Hrana > Maslaci od orašastih plodova > 100% namazi iz orašastih plodova > Maslac od kikirikija - GymBeam",
       "brend": "GymBeam Food",
@@ -765,6 +765,9 @@
     ]
   },
   "logo": "assets/logo/logo.svg",
-  "instagram_reference": [],
-  "hash": "907d271dc1"
+  "instagram_reference": [
+    "brief/instagram/01_profil_vrh.png",
+    "brief/instagram/02_mreza_objava.png"
+  ],
+  "hash": "2850231659"
 }

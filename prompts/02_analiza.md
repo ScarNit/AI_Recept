@@ -7,6 +7,10 @@ Ako snimke Instagrama NISU priložene, to jasno navedi u "nedostupni_izvori" i s
 izgledu feeda označi kao pretpostavke (izvor: brif / web stranica), a ne kao opažanja.
 
 Za svaku tvrdnju u "provjereni_podaci" navedi točan URL izvora. Pretpostavke drži odvojeno.
+Na snimkama posebno utvrdi: oblik obraćanja (ti ili vi – citiraj primjere), udio formata
+(reels / karusel / slika), prikaz osoba, stil teksta preko slike, istaknute priče (highlights).
+Ako se nešto što je vidljivo na snimkama razlikuje od brifa (npr. brif traži ti-formu, a brend
+piše s vi), navedi to u "nesuglasja_s_brifom" s preporukom.
 
 BRIF:
 {brif}
@@ -32,6 +36,8 @@ Vrati JSON ovog oblika:
   "provjereni_podaci": [{{"tvrdnja": "...", "izvor": "URL"}}],
   "pretpostavke": [{{"tvrdnja": "...", "zasto": "..."}}],
   "nedostupni_izvori": ["..."],
+  "oblik_obracanja": {{"oblik": "ti | vi", "primjeri": ["citat sa snimke ili weba"]}},
+  "nesuglasja_s_brifom": [{{"brif": "...", "opazeno": "...", "preporuka": "..."}}],
   "prilike": ["konkretna prilika za sadržaj u razdoblju {datum}"],
   "rizici": ["..."]
 }}

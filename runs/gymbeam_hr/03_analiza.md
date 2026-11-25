@@ -1,65 +1,66 @@
 # Analiza brenda – GymBeam Hrvatska
 
-GymBeam je vodeći europski webshop sportske prehrane s vlastitim linijama proizvoda koji se na hrvatskom tržištu obraća rekreativcima i zaljubljenicima u fitness. Komunikacija je pristupačna, energična i edukativna, s fokusom na ti-formu, transparentan sastav proizvoda i praktične fitness savjete za svakodnevicu.
+GymBeam Hrvatska je aktivni hrvatski profil velikog europskog webshopa sportske prehrane s preko 10.000 proizvoda na zalihi. Komunicira energično i informativno, kombinirajući prikaz vlastitih proizvoda, fitnes opreme i odjeće s edukativnim i lifestyle sadržajem.
 
 ## Publika
-- Rekreativci i početnici u teretani u Hrvatskoj u dobi od 18 do 40 godina koji žele jednostavno unijeti više proteina.
-- Zaposleni ljudi i studenti koji traže brz, jednostavan i hranjiv snack ili gotov napitak za pokret.
-- Kupci u potrazi za darovima za osobe koje treniraju i vode aktivan životni stil (npr. božićni darovi i poklon paketi).
+- Rekreativci i početnici u teretani 18–40 godina u Hrvatskoj
+- Studenti i zaposleni koji žele jednostavno unijeti više proteina
+- Kupci koji traže poklon za nekoga tko trenira
 
 ## Ton glasa
-Energičan, pozitivan i pristupačan ton u ti-formi s kratkim rečenicama i blagim humorm iz svakodnevnog života u teretani. Komunikacija je motivirajuća, bez osuđivanja i bez lažnih obećanja.
+Energično i pozitivno obraćanje u množini (vi) s kratkim rečenicama i dozom humora iz svakodnevice teretane.
 
-Primjeri: Nema izgovora za preskakanje proteina! / Ugrabi svoj omiljeni snack bez grižnje savjesti. / Otvoriti prozorčić odmah ili pričekati jutro?
+Primjeri: Pratite nas za fitness inspiraciju / Uživajte u besplatnoj dostavi / Spakirajte sa mnom moje dnevne vitamine
 
-Izbjegavati: Zdravstvene tvrdnje i obećanja konkretnih rezultata koji nisu navedeni u izvorima (npr. 'smršavi 5 kg'); Sramoćenje tijela (body shaming) i vršenje pritiska na pratitelje; Izmišljene citate, recenzije ili izjave stvarnih osoba; Korištenje engleskih pojmova gdje postoji uobičajena hrvatska riječ (osim službenih naziva okusa i proizvoda)
+Izbjegavati: Sramoćenje tijela; Pretjerana obećanja i nerealne zdravstvene tvrdnje
 
 ## Teme
-- Edukacija o nutritivnom sastavu: razlike među izvorima proteina (WPC, WPI, WPH) i uloga probavnih enzima DigeZyme®.
-- Brzi i jednostavni fit obroci te ideje za primjenu namaza, proteina i čipsa u svakodnevnoj prehrani.
-- Sezonski blagdanski sadržaj i darivanje s naglaskom na ograničenu ponudu Adventskog kalendara.
-- Interaktivni postovi poput 'Ovo ili ono' (slano vs. slatko) za poticanje komentara i dijeljenja.
+- Prehrana i dodaci prehrani
+- Fitnes oprema i odjeća
+- Recepti i lifestyle u teretani
+- Sezonske ponude i poklon paketi
 
 ## Vizualni stil
-- **boje:** #FF4410 – dinamična GymBeam narančasta za naglašavanje ključnih poruka i poziva na akciju; #111111 – crna za moderan, sportski kontrast i čitljivost teksta; #F3F1EE – svjetlija nijansa za pozadine i prozračan izgled objava
-- **tipografija:** Čista, bezserifna (sans-serif) tipografija s istaknutim podebljanim naslovima za brzu čitljivost na mobilnim uređajima.
-- **prikaz_proizvoda:** Jasno vidljiva originalna ambalaža i etikete bez izmjena i dodavanja neautoriziranih grafičkih elemenata.
-- **osobe:** Autentični rekreativci u prirodnim fitness ili svakodnevnim situacijama (u teretani, na poslu, u kuhinji).
-- **opazeno_na_instagramu:** Snimke zaslona Instagram profila nisu bile priložene u brifu (0 priloženih datoteka), pa konkretna opažanja s profila nisu dostupna. Zapažanja su formirana kao pretpostavke na temelju smjernica brifa i vizuala s webshopa.
+- **boje:** #FF4410 – prepoznatljiva GymBeam narančasta za naglaske i logo; #111111 – crna pozadina i elementi; #F3F1EE – svijetla pozadina
+- **tipografija:** Čisti i jednostavni fontovi prilagođeni društvenim mrežama
+- **prikaz_proizvoda:** Čisti prikaz originalne ambalaže, pakiranja i sezonskih proizvoda poput adventskog kalendara
+- **osobe:** Stvarni fitness influenceri i ambasadori brenda u teretani, kuhinji ili lifestyle okruženju
+- **opazeno_na_instagramu:** Na prvoj snimci profila vidljivo je da profil ima 42,2K pratitelja, 7.815 objavljenih postova te istaknute priče: Zajednica, Novosti, Članci, Recepti i Outfiti.; Na drugoj snimci feeda vidljivo je pretezito korištenje reels formata (oznaka s ikonom videoprikaza na većini objavljenih kvadrata) uz dinamične videozapise s ambasadorima i proizvodima.
 
 ## Provjereni podaci (s izvorom)
-- Just Whey Grass-Fed Protein u dozi od 30 g sadrži najmanje 22 g bjelančevina, 6,5 g BCAA te 6 probavnih enzima uključujući DigeZyme® i bromelain. — <https://gymbeam.hr/protein-just-whey-gymbeam.html>
-- Just Whey protein ima prosječnu ocjenu 4.7 na temelju 8505 recenzija kupaca. — <https://gymbeam.hr/protein-just-whey-gymbeam.html>
-- Adventski kalendar GymBeam sadrži 24 iznenađenja, teži približno 3,5 kg, a dimenzije su mu 45 × 32 × 22 cm uz cijenu od 81.95 EUR na dan 25.11.2026. — <https://gymbeam.hr/advent-kalendar-gymbeam.html>
-- Proteinski čips GymBeam radi se postupkom ekspandiranja vrućim zrakom, sadrži manje od 10 % masti i 21 g biljnih proteina na 100 g bez upotrebe soje. — <https://gymbeam.hr/proteinski-chips-gymbeam.html>
-- 100% Maslac od kikirikija GymBeam napravljen je od suho prženog kikirikija bez dodanog šećera, soli i palminog ulja te sadrži 27 g proteina na 100 g. — <https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html>
-- Proteinska pločica MoiMüv (okus cookies & cream) sadrži 22,6 g proteina i 2,4 g šećera po pločici od 60 g te ima ocjenu 4.7 na temelju 1060 recenzija. — <https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html>
-- 25g Protein Milkshake u bočici od 250 ml sadrži 25 g proteina, nizak udio masti i 0,1 g laktoze na 100 ml te ima ocjenu 4.8 na temelju 677 recenzija. — <https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html>
+- GymBeam ima više od 10.000 proizvoda na zalihi. — <https://gymbeam.hr>
+- Adventski kalendar GymBeam sadrži 24 prozorčića i stoji 81.95 EUR. — <https://gymbeam.hr/advent-kalendar-gymbeam.html>
+- Just Whey je protein sirutke iz mlijeka krava koje pasu travu, a cijena za 500 g kreće se od 26.95 EUR. — <https://gymbeam.hr/protein-just-whey-gymbeam.html>
+- Proteinska pločica MoiMüv ima cijenu od 1.69 EUR do 1.80 EUR ovisno o okusu. — <https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html>
+- Proteinski namaz MoiMüv u pakiranju od 400 g iznosi 10.5 EUR. — <https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html>
+- 25g Protein Milkshake od 250 ml ima cijenu 1.95 EUR. — <https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html>
+- Proteinski čips GymBeam od 40 g stoji 1.3 EUR. — <https://gymbeam.hr/proteinski-chips-gymbeam.html>
+- Maslac od kikirikija GymBeam od 340 g iznosi 3.1 EUR, a od 1000 g stoji 7.2 EUR. — <https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html>
 
 ## Pretpostavke (nije provjereno)
-- Vizualni identitet Instagram feeda @gymbeamhr oslanja se na visokokvalitetne fotografije ambalaže uz edukativne karusele s prepoznatljivom narančastom bojom (#FF4410). — *Snimke zaslona Instagram profila nisu priložene u brifu, stoga je izgled feeda pretpostavljen na temelju smjernica u brifu i dizajnerskih elemenata službenog webshopa.*
-- Adventski kalendar će se rasprodati vrlo brzo prije početka prosinca. — *U opisu proizvoda navedeno je da je riječ o ograničenoj seriji te da novih količina neće biti, no točne zalihe nisu javno prikazane.*
-- Pratitelji izvrsno reagiraju na slane fitness grickalice poput proteinskog čipsa kao alternativu slatkim pločicama. — *Pretpostavka temeljena na visokoj prosječnoj ocjeni (4.7) i velikom broju recenzija (1417) za Proteinski čips.*
+- Frekvencija objavljivanja objava na Instagramu je svakodnevna s obzirom na visok ukupan broj postova. — *Vidljiv je velik broj objava (7.815 postova) u biografiji profila.*
+
+## Oblik obraćanja
+**vi** – Pratite nas za fitness inspiraciju / Uživajte u besplatnoj dostavi / Spakirajte sa mnom moje dnevne vitamine
 
 ## Nedostupni izvori
-- Slikovne reference Instagram profila (datoteke brief/instagram/*.png i brief/instagram/*.jpg nisu bile priložene).
-- Točan broj preostalih komada Adventskog kalendara u skladištu.
+- Točne metrike dosega i angažmana pojedinačnih objava (insights nisu javno dostupni).
 
 ## Prilike
-- Pravovremena promocija Adventskog kalendara u drugoj polovici studenog i do 1. prosinca 2026. uz naglašavanje '24 dana iznenađenja' i poklon ideje.
-- Edukativni karuselski postovi koji demistificiraju probavljivost proteina i objasnjavanju ulogu probavnih enzima DigeZyme® kod nadutosti.
-- Kreativni 'Ovo ili ono' formati (npr. Proteinski čips vs. Proteinski namaz) za povećanje broja komentara i spremanja objava.
+- Iskorištavanje blagdanskog razdoblja u prosincu 2026. za promociju adventskog kalendara i prigodnih poklon paketa
+- Edukacija publike o sastojcima novijeg Just Whey proteina putem karusela koji se spremaju i dijele
 
 ## Rizici
-- Navođenje cijena bez datuma provjere (cijene se mijenjaju i podložne su akcijama poput Black Friday ponuda).
-- Iznošenje nedozvoljenih zdravstvenih tvrdnji i nerealnih garancija o mršavljenju ili transformaciji tijela.
-- Korištenje neslužbenih ili izmijenjenih verzija logotipa i ambalaže proizvoda.
+- Moguće promjene cijena sezonskih proizvoda i zaliha ako se ne provjere točni podaci u trenutku objave
+- Nevažeće zdravstvene tvrdnje ako se odstupljuje od službenih opisa proizvoda s webshopa
 
 ## Korišteni izvori (automatski dohvaćeno)
-- <https://gymbeam.hr/advent-kalendar-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
-- <https://gymbeam.hr/protein-just-whey-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
-- <https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
-- <https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
-- <https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
-- <https://gymbeam.hr/proteinski-chips-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
-- <https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html> (dohvaćeno 2026-11-25 19:10)
+- <https://gymbeam.hr/advent-kalendar-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- <https://gymbeam.hr/protein-just-whey-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- <https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- <https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- <https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- <https://gymbeam.hr/proteinski-chips-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- <https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html> (dohvaćeno 2026-11-25 19:33)
+- Snimka Instagrama: brief/instagram/01_profil_vrh.png
+- Snimka Instagrama: brief/instagram/02_mreza_objava.png
