@@ -128,14 +128,23 @@ h1 .hl { color: var(--orange); }
 .story .tekst, .story .podnaslov { font-size: 40px; }
 .story.l-brojka .broj { font-size: 300px; }
 
+/* --- kadar s AI pozadinom: scena ostaje vidljiva, kartica proizvoda manja i na dnu --- */
+.ai .deco { display: none; }
+.ai.l-naslovna .karta, .ai.l-cta .karta { flex: none; height: 42%; margin-top: auto; width: 62%;
+  align-self: center; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+.ai.story.l-naslovna .karta, .ai.story.l-cta .karta { height: 38%; width: 72%; }
+.ai.l-cta .gumb { align-self: center; }
+.ai.l-cta .gumb { margin-top: 30px; }
+.ai h1, .ai .podnaslov, .ai .tekst { text-shadow: 0 2px 18px rgba(0,0,0,.55); }
+
 .ai-pozadina { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
-.ai-pozadina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.15) 45%, rgba(0,0,0,.6)); }
+.ai-pozadina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.25) 38%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.7) 100%); }
 </style>
 </head>
 <body>
 {% macro naslov(t) %}{{ t | highlight }}{% endmacro %}
 {% macro karta(p, cls="") %}{% if p and p.src %}<div class="karta {{ cls }}">{% if k.oznaka %}<div class="oznaka" data-fit>{{ k.oznaka }}</div>{% endif %}<img src="{{ p.src }}" alt=""></div>{% endif %}{% endmacro %}
-<div class="kadar {{ k.tema }} l-{{ k.layout }}{{ " story" if story }}">
+<div class="kadar {{ k.tema }} l-{{ k.layout }}{{ " story" if story }}{{ " ai" if k.ai_pozadina_src }}">
   {% if k.ai_pozadina_src %}<div class="ai-pozadina" style="background-image:url('{{ k.ai_pozadina_src }}')"></div>{% endif %}
   <div class="deco d1"></div><div class="deco d2"></div>
   <div class="top"><div class="logo">{{ logo_svg | safe }}</div>{% if ukupno > 1 %}<div class="brojac">{{ indeks + 1 }}/{{ ukupno }}</div>{% endif %}</div>

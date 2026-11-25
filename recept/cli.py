@@ -26,6 +26,7 @@ import yaml
 
 from . import provjera as checks
 from . import render as rnd
+from . import scene as scenes
 from . import scrape
 from .llm import LLM, ManualStepRequired
 
@@ -502,6 +503,11 @@ def main(argv=None):
     r.add_argument("--od", choices=PHASES, help="ponovno pokreni od ove faze (nadalje)")
     r.add_argument("--do", choices=PHASES, help="stani nakon ove faze (npr. 'plan' za ljudsko odobrenje)")
     r.add_argument("--objave", help="samo ove objave, npr. 2 ili 1,3 (faze izrada/render/provjera)")
+    sc = sub.add_parser("scene", help="AI pozadinske scene za kadrove (ručno / huggingface / pollinations)")
+    sc.add_argument("--run", default="runs/gymbeam_hr")
+    sc.add_argument("--config")
+    sc.add_argument("--generator", choices=["rucno", "huggingface", "pollinations"])
+    sc.add_argument("--prepisi", action="store_true", help="ponovno generiraj postojeće slike")
     d = sub.add_parser("dorada", help="primijeni ljudske dorade (YAML) na sadržaj objava")
     d.add_argument("--run", default="runs/gymbeam_hr")
     d.add_argument("--datoteka", required=True)
@@ -513,6 +519,12 @@ def main(argv=None):
         interactive_brief(Path(args.izlaz))
     elif args.cmd == "pokreni":
         Run(args).run()
+    elif args.cmd == "scene":
+        cfg_path = Path(args.config) if args.config else (ROOT / "config.yaml")
+        if not cfg_path.exists():
+            cfg_path = ROOT / "config.example.yaml"
+        cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}
+        scenes.run(Path(args.run), cfg.get("slike", {}), args.generator, args.prepisi)
     elif args.cmd == "dorada":
         apply_human_edits(Path(args.run), Path(args.datoteka))
     else:

@@ -1,14 +1,15 @@
 """Sloj za jezične modele.
 
-Podržana su tri načina rada (``llm.provider`` u config.yaml):
+Načini rada (config.yaml → ``llm``):
 
-* ``gemini``  – Google Gemini preko OpenAI-kompatibilnog endpointa
-                (besplatni API ključ iz Google AI Studija, varijabla GEMINI_API_KEY).
-* ``openai``  – bilo koji OpenAI-kompatibilni endpoint (OpenAI, OpenRouter, lokalni
-                server …), varijable OPENAI_API_KEY i po želji OPENAI_BASE_URL.
-* ``manual``  – bez API ključa: prompt se zapisuje u datoteku, korisnik ga zalijepi u
-                ChatGPT / Gemini / Claude chat i odgovor spremi u pripremljenu
-                datoteku; ponovno pokretanje iste faze nastavlja dalje.
+* ``providers`` – lanac OpenAI-kompatibilnih pružatelja (Gemini, Groq, OpenRouter …), svaki
+  sa svojom varijablom za ključ i listom modela. Recept kruži kroz sve parove
+  (pružatelj, model) redom prioriteta: kad je jedan preopterećen (503) ili potroši kvotu
+  (429), prelazi na sljedeći. Pružatelj bez postavljenog ključa se preskače.
+* ``provider: manual`` – bez API ključa: prompt se zapisuje u datoteku, korisnik ga
+  zalijepi u ChatGPT / Gemini / Claude chat i odgovor spremi u pripremljenu datoteku;
+  ponovno pokretanje iste faze nastavlja dalje.
+* (kompatibilnost) ``provider: gemini`` ili ``provider: openai`` + ``models``.
 
 Svi pozivi vraćaju čisti tekst; ``chat_json`` dodatno parsira JSON odgovor.
 """
@@ -32,34 +33,44 @@ class ManualStepRequired(Exception):
     """Ručni način rada: prompt je zapisan, čeka se odgovor korisnika."""
 
 
+def _targets(cfg: dict) -> list[dict]:
+    """Lista (pružatelj, model) parova redom prioriteta."""
+    providers = cfg.get("providers")
+    if not providers:  # stari oblik konfiguracije
+        prov = cfg.get("provider", "gemini")
+        providers = [{
+            "name": prov,
+            "base_url": GEMINI_BASE if prov == "gemini" else os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1"),
+            "key_env": "GEMINI_API_KEY" if prov == "gemini" else "OPENAI_API_KEY",
+            "models": cfg.get("models") or ["gemini-3.5-flash"],
+        }]
+    out = []
+    for p in providers:
+        key = os.environ.get(p.get("key_env", ""), "")
+        if not key:
+            continue
+        for m in p.get("models", []):
+            m = m if isinstance(m, dict) else {"id": m}
+            out.append({"provider": p["name"], "base_url": p["base_url"].rstrip("/"), "key": key,
+                        "model": m["id"], "vision": m.get("vision", p.get("vision", True)),
+                        "extra_headers": p.get("headers", {})})
+    return out
+
+
 class LLM:
     def __init__(self, cfg: dict, run_dir: Path):
         self.cfg = cfg or {}
-        self.provider = self.cfg.get("provider", "gemini")
-        self.models = self.cfg.get("models") or ["gemini-3.5-flash"]
+        self.provider = self.cfg.get("provider", "chain" if self.cfg.get("providers") else "gemini")
         self.temperature = self.cfg.get("temperature", 0.7)
         self.max_retries = int(self.cfg.get("max_retries", 6))
         self.timeout = int(self.cfg.get("timeout_s", 240))
         self.run_dir = run_dir
         self.log_path = run_dir / "llm_log.jsonl"
-
-        if self.provider == "gemini":
-            self.base_url = GEMINI_BASE
-            self.api_key = os.environ.get("GEMINI_API_KEY", "")
-        elif self.provider == "openai":
-            self.base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
-            self.api_key = os.environ.get("OPENAI_API_KEY", "")
-        elif self.provider == "manual":
-            self.base_url = self.api_key = ""
-        else:
-            raise ValueError(f"Nepoznat llm.provider: {self.provider}")
-
-        if self.provider != "manual" and not self.api_key:
-            sys.exit(
-                f"Nedostaje API ključ za provider '{self.provider}'. Postavi "
-                f"{'GEMINI_API_KEY' if self.provider == 'gemini' else 'OPENAI_API_KEY'} "
-                "(vidi .env.example) ili u config.yaml stavi llm.provider: manual."
-            )
+        self.targets = [] if self.provider == "manual" else _targets(self.cfg)
+        if self.provider != "manual" and not self.targets:
+            envs = [p.get("key_env") for p in self.cfg.get("providers", [])] or ["GEMINI_API_KEY"]
+            sys.exit("Nijedan pružatelj nema API ključ. Postavi barem jednu od varijabli: "
+                     + ", ".join(envs) + " (vidi .env.example) ili u config.yaml stavi llm.provider: manual.")
 
     # ------------------------------------------------------------------ javno
     def chat(self, system: str, user: str, *, step: str, images: list[Path] | None = None,
@@ -91,50 +102,52 @@ class LLM:
             content = [{"type": "text", "text": user}]
             for img in images:
                 content.append({"type": "image_url", "image_url": {"url": _data_uri(img)}})
-        body = {
-            "messages": [{"role": "system", "content": system}, {"role": "user", "content": content}],
-            "temperature": self.temperature,
-        }
-        if json_mode:
-            body["response_format"] = {"type": "json_object"}
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": content}]
 
-        # Besplatni modeli su povremeno preopterećeni (HTTP 503/429). Umjesto dugog
-        # čekanja na jedan model, kružimo kroz listu modela u nekoliko krugova;
-        # prvi model u listi je preferirani (najkvalitetniji).
+        # Besplatni modeli su povremeno preopterećeni (HTTP 503/429). Umjesto dugog čekanja
+        # na jedan model, kružimo kroz sve (pružatelj, model) parove u nekoliko krugova;
+        # prvi u listi je preferirani (najkvalitetniji).
+        candidates = [t for t in self.targets if t["vision"] or not images]
+        if not candidates:
+            raise RuntimeError("Nijedan konfigurirani model ne prima slike, a korak ih treba.")
         errors, dead = [], set()
         for rnd in range(self.max_retries):
-            for model in self.models:
-                if model in dead:
+            for t in candidates:
+                tid = f"{t['provider']}/{t['model']}"
+                if tid in dead:
                     continue
-                body["model"] = model
+                body = {"model": t["model"], "messages": messages, "temperature": self.temperature}
+                if json_mode:
+                    body["response_format"] = {"type": "json_object"}
                 t0 = time.time()
                 try:
-                    r = requests.post(
-                        f"{self.base_url}/chat/completions",
-                        headers={"Authorization": f"Bearer {self.api_key}",
-                                 "Content-Type": "application/json"},
-                        json=body, timeout=self.timeout)
+                    r = requests.post(f"{t['base_url']}/chat/completions",
+                                      headers={"Authorization": f"Bearer {t['key']}",
+                                               "Content-Type": "application/json", **t["extra_headers"]},
+                                      json=body, timeout=self.timeout)
                 except requests.RequestException as e:
-                    errors.append(f"{model}: {e}")
+                    errors.append(f"{tid}: {e}")
                     continue
                 if r.status_code == 200:
                     data = r.json()
                     if isinstance(data, list):
                         data = data[0]
-                    text = data["choices"][0]["message"].get("content") or ""
+                    text = (data.get("choices") or [{}])[0].get("message", {}).get("content") or ""
                     if text.strip():
-                        self._log(step, model, time.time() - t0, system, user, text, images)
-                        print(f"    ({model}, {time.time() - t0:.0f} s)")
+                        self._log(step, tid, time.time() - t0, system, user, text, images)
+                        print(f"    ({tid}, {time.time() - t0:.0f} s)")
                         return text
-                    errors.append(f"{model}: prazan odgovor")
+                    errors.append(f"{tid}: prazan odgovor")
                     continue
                 msg = _err_msg(r)
-                errors.append(f"{model} HTTP {r.status_code}: {msg[:160]}")
-                print(f"  ! {model} HTTP {r.status_code}: {msg[:70]}{msg[msg.find(' [kvota'):] if ' [kvota' in msg else ''}",
+                errors.append(f"{tid} HTTP {r.status_code}: {msg[:160]}")
+                print(f"  ! {tid} HTTP {r.status_code}: {msg[:70]}{msg[msg.find(' [kvota'):] if ' [kvota' in msg else ''}",
                       file=sys.stderr)
-                if r.status_code in (400, 401, 403, 404) or (r.status_code == 429 and ("per day" in msg.lower() or "PerDay" in msg)):
-                    dead.add(model)  # model nedostupan ili dnevna kvota potrošena
-            if len(dead) == len(self.models):
+                low = msg.lower()
+                if r.status_code in (400, 401, 403, 404, 413) or (
+                        r.status_code == 429 and ("per day" in low or "perday" in low or "daily" in low)):
+                    dead.add(tid)  # model nedostupan, ne prima zahtjev ili je dnevna kvota potrošena
+            if len(dead) == len(candidates):
                 break
             time.sleep(min(60, 10 * (rnd + 1)))
         raise RuntimeError("Svi modeli su odbili zahtjev:\n  " + "\n  ".join(errors[-8:]))

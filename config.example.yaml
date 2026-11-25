@@ -1,22 +1,49 @@
 # Kopiraj u config.yaml i prilagodi. API ključevi NE idu ovdje nego u varijable okoline
-# (vidi .env.example).
+# (vidi .env.example). Pružatelj čija varijabla nije postavljena automatski se preskače,
+# pa je dovoljan i samo besplatni GEMINI_API_KEY.
 
 llm:
-  # gemini  – besplatni ključ s https://aistudio.google.com/apikey (varijabla GEMINI_API_KEY)
-  # openai  – bilo koji OpenAI-kompatibilni API (OPENAI_API_KEY, opcionalno OPENAI_BASE_URL)
-  # manual  – bez ključa: prompt se sprema u datoteku, zalijepiš ga u ChatGPT/Gemini/Claude
-  provider: gemini
-  # Redoslijed = prioritet. Besplatni modeli su povremeno preopterećeni (HTTP 503), pa
-  # recept kruži kroz listu. Nazivi modela se mijenjaju – popis: GET /v1beta/openai/models
-  models:
-    - gemini-3.6-flash
-    - gemini-3.5-flash
-    - gemini-flash-latest
-    - gemini-3.5-flash-lite
-    - gemini-flash-lite-latest
+  # Lanac OpenAI-kompatibilnih pružatelja, redom prioriteta. Kad je model preopterećen
+  # (HTTP 503) ili potroši besplatnu kvotu (429), recept prelazi na sljedeći.
+  # Nazivi modela se mijenjaju – popis: GET <base_url>/models
+  # Za rad bez ijednog ključa: provider: manual (prompt → ChatGPT/Gemini chat → odgovor u datoteku)
+  providers:
+    - name: gemini                       # besplatno: https://aistudio.google.com/apikey
+      base_url: https://generativelanguage.googleapis.com/v1beta/openai
+      key_env: GEMINI_API_KEY
+      models:
+        - gemini-3.6-flash               # najbolji hrvatski u testu; besplatno ~20 zahtjeva/dan
+        - gemini-3.5-flash
+        - gemini-flash-latest
+    - name: groq                         # besplatno: https://console.groq.com/keys
+      base_url: https://api.groq.com/openai/v1
+      key_env: GROQ_API_KEY
+      models:
+        - id: meta-llama/llama-4-maverick-17b-128e-instruct
+        - id: llama-3.3-70b-versatile
+          vision: false
+    - name: openrouter                   # besplatni modeli s nastavkom ":free": https://openrouter.ai/keys
+      base_url: https://openrouter.ai/api/v1
+      key_env: OPENROUTER_API_KEY
+      models:
+        - id: meta-llama/llama-4-maverick:free
+    - name: gemini-lite                  # zadnja rezerva: lakši Gemini modeli (veća kvota, slabiji tekst)
+      base_url: https://generativelanguage.googleapis.com/v1beta/openai
+      key_env: GEMINI_API_KEY
+      models:
+        - gemini-3.5-flash-lite
+        - gemini-flash-lite-latest
   temperature: 0.7
-  max_retries: 5        # broj krugova kroz listu modela
+  max_retries: 5        # broj krugova kroz cijeli lanac
   timeout_s: 240
+
+slike:
+  # Generator AI pozadinskih scena (python -m recept scene):
+  #   rucno        – zapiše promptove u ai_slike/PROMPTOVI.md za ChatGPT / Gemini aplikaciju
+  #   huggingface  – FLUX preko Hugging Face Inference Providers (HF_TOKEN, besplatni mjesečni krediti)
+  #   pollinations – bez ključa, ali niža rezolucija i vodeni žig (samo za brzi test)
+  generator: rucno
+  huggingface_model: black-forest-labs/FLUX.1-schnell
 
 provjera:
   automatski_popravak: true   # primijeni ispravke AI kritičara (uz provjeru brojki) i ponovno renderiraj
