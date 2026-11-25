@@ -1,0 +1,276 @@
+{
+  "objave": [
+    {
+      "broj": 1,
+      "format": "karusel",
+      "kadrovi": [
+        {
+          "layout": "naslovna",
+          "tema": "tamna",
+          "nadnaslov": "Vodič kroz Just Whey",
+          "naslov": "Što tvoj *protein* zapravo sadrži?",
+          "podnaslov": "Saznaj razliku između koncentrata, izolata i hidrolizata sirutke.",
+          "proizvod": {
+            "id": "protein-just-whey-gymbeam",
+            "slika": 0
+          },
+          "alt_tekst": "Prozirna ambalaža Just Whey proteina okusa Vanilla Ice Cream s prikazom glavnih svojstava na etiketi.",
+          "story_naljepnica": null
+        },
+        {
+          "layout": "brojka",
+          "tema": "narancasta",
+          "nadnaslov": "Jedna mjerica od 30 g",
+          "brojka": {
+            "vrijednost": "22 g",
+            "opis": "bjelančevina u dozi od 30 g"
+          },
+          "tekst": "Just Whey je protein sirutke iz mlijeka krava koje pasu travu, a objedinjuje tri izvora: koncentrat, izolat i hidrolizat.",
+          "proizvod": {
+            "id": "protein-just-whey-gymbeam",
+            "slika": 2
+          },
+          "alt_tekst": "Ambalaža Just Whey proteina okusa Salted Caramel uz istaknutu količinu bjelančevina.",
+          "story_naljepnica": null
+        },
+        {
+          "layout": "lista",
+          "tema": "svijetla",
+          "nadnaslov": "Anatomija mjerice",
+          "naslov": "Što se nalazi u svakoj dozi?",
+          "stavke": [
+            {
+              "naslov": "Koncentrat (WPC)",
+              "tekst": "Donosi prirodne frakcije sirutke i prolazi blagi postupak membranske ultrafiltracije."
+            },
+            {
+              "naslov": "Izolat (WPI)",
+              "tekst": "Pruža višu koncentraciju bjelančevina uz niži udio laktoze."
+            },
+            {
+              "naslov": "Hidrolizat (WPH)",
+              "tekst": "Bjelančevina već enzimski razgrađena na kraće peptide."
+            }
+          ],
+          "alt_tekst": "Grafički prikaz triju izvora proteina sirutke u Just Whey mješavini.",
+          "story_naljepnica": null
+        },
+        {
+          "layout": "brojka",
+          "tema": "tamna",
+          "nadnaslov": "Aminokiseline",
+          "brojka": {
+            "vrijednost": "6,5 g",
+            "opis": "BCAA u jednoj dozi"
+          },
+          "tekst": "Osim esencijalnih aminokiselina, mješavina osigurava visoku iskoristivost i čisti sastav bez nepotrebnih punila.",
+          "proizvod": {
+            "id": "protein-just-whey-gymbeam",
+            "slika": 3
+          },
+          "alt_tekst": "Ambalaža Just Whey proteina okusa Chocolate Milkshake.",
+          "story_naljepnica": null
+        },
+        {
+          "layout": "cta",
+          "tema": "narancasta",
+          "nadnaslov": "Probavni enzimi",
+          "naslov": "Moćni *enzimi* u formuli",
+          "tekst": "Sastav nadopunjuje šest probavnih enzima – pet u patentiranom kompleksu DigeZyme® te bromelain.",
+          "gumb": "Spremi objavu",
+          "proizvod": {
+            "id": "protein-just-whey-gymbeam",
+            "slika": 0
+          },
+          "alt_tekst": "Just Whey protein s istaknutim enzimima DigeZyme i pozivom na spremanje objave.",
+          "story_naljepnica": null
+        }
+      ],
+      "opis": "Nisi siguran što tvoj protein zapravo sadrži? Vrijeme je da zaviriš ispod etikete! 🔍\n\nJust Whey je naš protein sirutke iz mlijeka krava koje pasu travu, a kombinira čak tri izvora bjelančevina: koncentrat, izolat i hidrolizat. U jednoj mjerici od 30 g čeka te najmanje 22 g bjelančevina i 6,5 g BCAA – bez punila i zgušnjivača.\n\nSastav nadopunjuje šest probavnih enzima: pet u kompleksu DigeZyme® te bromelain.\n\nSpremi ovaj vodič da ti se nađe pri ruci sljedeći put kad biraš protein i pošalji ga prijatelju iz teretane! 💪\n\nPakiranje od 500 g: 26,95 € (cijena na gymbeam.hr, 25.11.2026.).",
+      "hashtagovi": [
+        "#gymbeam",
+        "#gymbeamhr",
+        "#justwhey",
+        "#proteini",
+        "#fitnesshrvatska",
+        "#vjezbanje",
+        "#prehrana"
+      ],
+      "koristene_cinjenice": [
+        {
+          "cinjenica": "Just Whey je protein sirutke iz triju izvora bjelančevina – koncentrata, izolata i hidrolizata.",
+          "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
+        },
+        {
+          "cinjenica": "U dozi od 30 g sadrži najmanje 22 g bjelančevina i 6,5 g BCAA.",
+          "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
+        },
+        {
+          "cinjenica": "Obogaćen je kompleksom probavnih enzima DigeZyme® i bromelainom.",
+          "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
+        }
+      ],
+      "ai_scena_prompt": "Clean modern gym aesthetic with dark background, minimalist orange and white gym elements, high contrast, professional sports nutrition style"
+    },
+    {
+      "broj": 2,
+      "format": "slika",
+      "kadrovi": [
+        {
+          "layout": "anketa",
+          "tema": "tamna",
+          "nadnaslov": "VEČERNJA DILEMA",
+          "naslov": "*Slano* ili *slatko*?",
+          "tekst": "Koji je tvoj izbor nakon kasnog večernjeg treninga?",
+          "opcije": [
+            {
+              "oznaka": "A",
+              "naziv": "Proteinski čips",
+              "proizvod": {
+                "id": "proteinski-chips-gymbeam",
+                "slika": 0
+              }
+            },
+            {
+              "oznaka": "B",
+              "naziv": "MoiMüv namaz",
+              "proizvod": {
+                "id": "proteinski-namaz-moimuv-gymbeam",
+                "slika": 0
+              }
+            }
+          ],
+          "alt_tekst": "Grafički podijeljen vizual s natpisom Slano ili slatko: na opciji A nalazi se GymBeam Proteinski čips s morskom soli, a na opciji B MoiMüv proteinski namaz od lješnjaka.",
+          "story_naljepnica": null
+        }
+      ],
+      "opis": "Odradio si naporan večernji trening, istuširao se i stigao doma – i sad kreće vječna rasprava sa samim sobom.\n\nBiraš li nešto slano i hrskavo ili kremasto i slatko?\n\nEkipa A: Proteinski čips priprema se ekspandiranjem vrućim zrakom, sadrži manje od 10 % masti i donosi do 8,4 g proteina po vrećici. Savršen za hrskanje bez grižnje savjesti.\n\nEkipa B: MoiMüv Proteinski namaz s mekanom kremastom teksturom koja se topi na jeziku. Izvor je proteina, a ne sadrži dodani šećer – idealan na rižinim krekerima ili ravno na žlicu.\n\nNema krivog odgovora, ali nas zanima: jesi li večeras Tim A ili Tim B?\n\nNapiši svoje slovo u komentar! 👇",
+      "hashtagovi": [
+        "#gymbeam",
+        "#gymbeamhr",
+        "#fitnesshrvatska",
+        "#proteinskisnack",
+        "#fitrecepti",
+        "#snacktime",
+        "#trening"
+      ],
+      "koristene_cinjenice": [
+        {
+          "cinjenica": "Proteinski čips priprema se ekspandiranjem vrućim zrakom i sadrži manje od 10 % masti.",
+          "izvor": "https://gymbeam.hr/proteinski-chips-gymbeam.html"
+        },
+        {
+          "cinjenica": "Proteinski namaz MoiMüv izvor je proteina i ne sadrži dodani šećer.",
+          "izvor": "https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html"
+        }
+      ],
+      "ai_scena_prompt": "Dark modern studio background with dynamic orange and charcoal gray lighting split in half down the center, subtle fitness atmosphere, clean and minimalist aesthetic, 8k resolution, no products, no text"
+    },
+    {
+      "broj": 3,
+      "format": "story",
+      "kadrovi": [
+        {
+          "layout": "naslovna",
+          "tema": "tamna",
+          "nadnaslov": "ODBROJAVANJE MOŽE POČETI",
+          "naslov": "Jesi li spreman za *24 iznenađenja*?",
+          "podnaslov": "Otvori svaki dan prozorčić uz omiljene fitness poslastice i dodatke prehrani.",
+          "proizvod": {
+            "id": "advent-kalendar-gymbeam",
+            "slika": 1
+          },
+          "alt_tekst": "Prednja i bočna strana zelene kutije GymBeam Adventskog kalendara s blagdanskim natpisima.",
+          "story_naljepnica": {
+            "tip": "anketa",
+            "pitanje": "Kada otvaraš prozorčić?",
+            "opcije": [
+              "Odmah ujutro",
+              "Nakon treninga"
+            ]
+          }
+        },
+        {
+          "layout": "brojka",
+          "tema": "narancasta",
+          "nadnaslov": "UNUTAR KALENDARA",
+          "brojka": {
+            "vrijednost": "24",
+            "opis": "iznenađenja iza prozorčića"
+          },
+          "tekst": "Unutra te čekaju proteinske pločice, keksi, šejker, vitamini i napitci za svaki dan u prosincu.",
+          "proizvod": {
+            "id": "advent-kalendar-gymbeam",
+            "slika": 2
+          },
+          "alt_tekst": "Rastvoreni crveno-bijeli adventski kalendar s numeriranim pretincima od 1 do 24.",
+          "story_naljepnica": null
+        },
+        {
+          "layout": "proizvod",
+          "tema": "svijetla",
+          "nadnaslov": "LIMITIRANO IZDANJE",
+          "naslov": "Požuri prije nego se *rasproda*!",
+          "tekst": "Adventskog kalendara imamo samo u ograničenoj količini i novih više neće biti u ponudi.",
+          "proizvod": {
+            "id": "advent-kalendar-gymbeam",
+            "slika": 0
+          },
+          "cinjenice": [
+            "24 najpopularnija proizvoda",
+            "Ograničena sezonska serija",
+            "Dimenzije: 45 × 32 × 22 cm"
+          ],
+          "alt_tekst": "Zelena i crvena kutija GymBeam adventskog kalendara u zatvorenom i otvorenom izdanju.",
+          "story_naljepnica": null
+        },
+        {
+          "layout": "cta",
+          "tema": "tamna",
+          "nadnaslov": "ULJEPŠAJ SI PROSINAC",
+          "naslov": "Ugrabi svoj *Adventski kalendar*",
+          "tekst": "Ne čekaj zadnji trenutak. Osiguraj svoj primjerak na vrijeme i odbrojavaj dane do Božića u fitness stilu.",
+          "gumb": "Kupi na webshopu",
+          "proizvod": {
+            "id": "advent-kalendar-gymbeam",
+            "slika": 3
+          },
+          "alt_tekst": "Šareno rastvoreni Adventski kalendar s numeriranim prozorčićima i fitness motivima.",
+          "story_naljepnica": {
+            "tip": "link",
+            "tekst": "KUPI KALENDAR",
+            "url": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+          }
+        }
+      ],
+      "opis": "Spreman za najslađe odbrojavanje do Božića? 🎄\n\nGymBeam Adventski kalendar skriva 24 iznenađenja! Iza prozorčića te čekaju naši najpopularniji proizvodi – proteinske pločice, keksi i druge poslastice, ali i šejker, vitamini i napitci.\n\nSavršen dar za tebe ili dragu osobu koja voli aktivan životni stil. 🎁\n\n⚠️ Kalendara ima samo ograničen broj, stoga ne čekaj posljednji trenutak.\n\nCijena: 81,95 € (na gymbeam.hr, 25.11.2026.)\n\nKlikni na poveznicu u Storyju i osiguraj svoj kalendar!",
+      "hashtagovi": [
+        "#gymbeam",
+        "#gymbeamhr",
+        "#adventskikalendar",
+        "#fitnesspoklon",
+        "#poklon",
+        "#bozic2026"
+      ],
+      "koristene_cinjenice": [
+        {
+          "cinjenica": "Adventski kalendar GymBeam skriva 24 iznenađenja s najpopularnijim proizvodima.",
+          "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+        },
+        {
+          "cinjenica": "Radi se o ograničenoj seriji sezonskog proizvoda.",
+          "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+        },
+        {
+          "cinjenica": "Dimenzije kalendara su 45 × 32 × 22 cm.",
+          "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+        },
+        {
+          "cinjenica": "Cijena iznosi 81.95 EUR.",
+          "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+        }
+      ],
+      "ai_scena_prompt": "Cozy festive background with subtle dark wood texture, warm Christmas lights softly blurred in the backdrop, minimalist orange and black holiday decorations, aesthetic high-end product showcase style, clean background without any text or products."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "objave": [
+    {
+      "broj": 1,
+      "naziv": "Vodič kroz Just Whey: Što tvoj protein zapravo sadrži?",
+      "cilj": "Edukacija koja se sprema i dijeli (spremanja, dijeljenja)",
+      "mjera_uspjeha": "Spremanja i dijeljenja objave",
+      "format": "karusel",
+      "broj_kadrova": 5,
+      "koncept": "Edukativni karusel koji korak po korak objašnjava razliku između koncentrata, izolata i hidrolizata sirutke u Just Whey proteinu. Posljednji slajdovi naglašavaju ulogu probavnih enzima DigeZyme® i bromelaina.",
+      "proizvodi": [
+        "protein-just-whey-gymbeam"
+      ],
+      "kljucne_cinjenice": [
+        {
+          "cinjenica": "Just Whey je protein sirutke iz triju izvora bjelančevina – koncentrata, izolata i hidrolizata.",
+          "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
+        },
+        {
+          "cinjenica": "U dozi od 30 g sadrži najmanje 22 g bjelančevina i 6,5 g BCAA.",
+          "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
+        },
+        {
+          "cinjenica": "Obogaćen je kompleksom probavnih enzima DigeZyme® i bromelainom.",
+          "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
+        }
+      ],
+      "obrazlozenje": "Rekreativci i početnici često nisu sigurni kako odabrati protein i zabrinuti su zbog teške probavljivosti. Edukativni sadržaj s konkretnim brojkama i objašnjenjem probavnih enzima idealan je za spremanje i dijeljenje unutar fitness zajednice."
+    },
+    {
+      "broj": 2,
+      "naziv": "Slano ili slatko nakon kasnog treninga?",
+      "cilj": "Više komentara i interakcije zajednice",
+      "mjera_uspjeha": "Broj komentara i glasanja u raspravi",
+      "format": "slika",
+      "broj_kadrova": 1,
+      "koncept": "Grafički podijeljen vizual u GymBeam bojama s velikim napisom 'SLANO VS. SLATKO'. Na lijevoj strani nalazi se fotografija Proteinskog čipsa, a na desnoj MoiMüv Proteinski namaz. U opisu pozivamo pratitelje da u komentarima napišu koji su tim nakon večernjeg treninga.",
+      "proizvodi": [
+        "proteinski-chips-gymbeam",
+        "proteinski-namaz-moimuv-gymbeam"
+      ],
+      "kljucne_cinjenice": [
+        {
+          "cinjenica": "Proteinski čips priprema se ekspandiranjem vrućim zrakom i sadrži manje od 10 % masti.",
+          "izvor": "https://gymbeam.hr/proteinski-chips-gymbeam.html"
+        },
+        {
+          "cinjenica": "Proteinski namaz MoiMüv izvor je proteina i ne sadrži dodani šećer.",
+          "izvor": "https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html"
+        }
+      ],
+      "obrazlozenje": "Vječna dilema između slanog i slatkog pridonosi visokoj stopi angažmana (engagement rate). Post postavlja jednostavno pitanje koje potiče brzu reakciju i komentare pratitelja bez prodajnog pritiska."
+    },
+    {
+      "broj": 3,
+      "naziv": "Odbrojavanje do prosinca uz Adventski kalendar",
+      "cilj": "Interes za kupnju sezonskog proizvoda (klik na link / posjet webshopu)",
+      "mjera_uspjeha": "Broj klikova na stiker s poveznicom u Storyju",
+      "format": "story",
+      "broj_kadrova": 4,
+      "koncept": "Blagdanski Story niz koji stvara osjećaj iščekivanja prije 1. prosinca. Cadre po cadre prikazuje detalje pakiranja Adventskog kalendara, ističe 24 iznenađenja te završava s naljepnicom koja vodi izravno na kupnju na webshopu.",
+      "proizvodi": [
+        "advent-kalendar-gymbeam"
+      ],
+      "kljucne_cinjenice": [
+        {
+          "cinjenica": "Adventski kalendar GymBeam skriva 24 iznenađenja s najpopularnijim proizvodima.",
+          "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+        },
+        {
+          "cinjenica": "Radi se o ograničenoj seriji sezonskog proizvoda.",
+          "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
+        }
+      ],
+      "obrazlozenje": "Predbožićno razdoblje u kasnom studenom i početkom prosinca idealno je za promociju poklona. Story format s naljepnicom za poveznicu pruža najbrži put od interesa do posjeta webshopu."
+    }
+  ]
+}

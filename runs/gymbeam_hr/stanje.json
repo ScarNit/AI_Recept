@@ -1,0 +1,47 @@
+{
+  "brif": {
+    "zavrseno": "2026-11-25 19:10:00",
+    "sekundi": 0.0,
+    "izlaz": "00_brif.json"
+  },
+  "istrazivanje": {
+    "zavrseno": "2026-11-25 19:10:25",
+    "sekundi": 25.9,
+    "izlaz": "01_izvori.json"
+  },
+  "opis_slika": {
+    "zavrseno": "2026-11-25 19:11:35",
+    "sekundi": 69.9,
+    "izlaz": "02_opis_slika.json"
+  },
+  "analiza": {
+    "zavrseno": "2026-11-25 19:12:06",
+    "sekundi": 30.7,
+    "izlaz": "03_analiza.json"
+  },
+  "plan": {
+    "zavrseno": "2026-11-25 19:12:48",
+    "sekundi": 42.4,
+    "izlaz": "04_plan.json"
+  },
+  "izrada": {
+    "zavrseno": "2026-11-25 19:18:29",
+    "sekundi": 165.6,
+    "izlaz": "05_sadrzaj.json"
+  },
+  "render": {
+    "zavrseno": "2026-11-25 19:22:44",
+    "sekundi": 7.6,
+    "izlaz": "06_render.json"
+  },
+  "provjera": {
+    "zavrseno": "2026-11-25 19:21:14",
+    "sekundi": 107.7,
+    "izlaz": "07_provjera.json"
+  },
+  "isporuka": {
+    "zavrseno": "2026-11-25 19:22:44",
+    "sekundi": 0.3,
+    "izlaz": "isporuka/README.md"
+  }
+}

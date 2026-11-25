@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+config.yaml
+runs/*/render_html/
+.venv/
+runs/*/assets/obrezano/

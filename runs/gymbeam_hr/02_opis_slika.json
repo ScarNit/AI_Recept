@@ -1,0 +1,205 @@
+{
+  "advent-kalendar-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Prikaz zatvorene zelene kutije adventskog kalendara s motivom staklenke i natpisom 'Merry Christmas', uz otvoreni crveni kalendar u pozadini.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 1,
+      "opis": "Prikaz prednje i bočne strane zatvorene zelene kutije adventskog kalendara s natpisima 'GymBeam ADVENT CALENDAR', 'MERRY FITMAS', 'JINGLE ALL THE WHEY' i 'HO-HO-HOLY GAINS'.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 2,
+      "opis": "Rastvoreni crveno-bijeli adventski kalendar koji prikazuje unutarnje numerirane pretince od 1 do 24 s ilustracijama fitness motiva i logotipom GymBeam.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 3,
+      "opis": "Rastvoreni šareni adventski kalendar (zeleno-crveno-ružičasto-bež kombinacija) s pretincima od 1 do 24 te natpisima 'MERRY FITMAS' i 'EAT. TRAIN. BE MERRY.'.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    }
+  ],
+  "protein-just-whey-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Prozirna ambalaža GymBeam Just Whey proteina (1000 g) u varijanti Vanilla Ice Cream sa svijetložutim prahom. Na bijeloj etiketi istaknuti su naziv proizvoda, okus i sastav (Grass Fed Whey Protein, Digestive Enzymes, Vitamins + Minerals, Stevia Sweetened).",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 1,
+      "opis": "Prozirna ambalaža GymBeam Just Whey proteina (1000 g) bez okusa (Unflavored) s bijelim prahom. Etiketa sadrži sivu oznaku 'UNFLAVORED' i natpis 'NO SWEETENER'.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 2,
+      "opis": "Prozirna ambalaža GymBeam Just Whey proteina (1000 g) s okusom Salted Caramel i krem/bež prahom. Na etiketi je narančasta oznaka okusa 'SALTED CARAMEL' i tekst o sastavu.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 3,
+      "opis": "Prozirna ambalaža GymBeam Just Whey proteina (1000 g) s okusom Chocolate Milkshake i smeđim čokoladnim prahom. Na etiketi je smeđa oznaka okusa 'CHOCOLATE MILKSHAKE' i tekst o sastavu.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    }
+  ],
+  "proteinska-plocica-moimuv-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Pojedinačni packshot ambalaže proteinske pločice GymBeam MoiMüv okusa Cookies & Cream od 60 g u uspravnom položaju.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 1,
+      "opis": "Pojedinačni packshot ambalaže proteinske pločice GymBeam MoiMüv okusa Crunchy Caramel od 60 g u uspravnom položaju.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 2,
+      "opis": "Kutijasto skupno pakiranje (20 x 60 g) proteinskih pločica GymBeam MoiMüv okusa Crunchy Caramel.",
+      "vrsta": "više pakiranja",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 3,
+      "opis": "Kutijasto skupno pakiranje (20 x 60 g) proteinskih pločica GymBeam MoiMüv okusa Cookies & Cream.",
+      "vrsta": "više pakiranja",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    }
+  ],
+  "proteinski-namaz-moimuv-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Studio fotografija (packshot) ambalaže MoiMüv proteinskog namaza od 400 g u okusu Hazelnut sa smeđom staklenkom i bijelim poklopcem.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": false
+    },
+    {
+      "indeks": 1,
+      "opis": "Studio fotografija (packshot) ambalaže MoiMüv proteinskog namaza od 400 g u okusu Milky sa svijetlokrem staklenkom i plavim detaljima na etiketi.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": false
+    },
+    {
+      "indeks": 2,
+      "opis": "Studio fotografija (packshot) ambalaže MoiMüv proteinskog namaza od 400 g u okusu Salted Caramel sa karamel-smeđom staklenkom i narančastim detaljima na etiketi.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": false
+    }
+  ],
+  "moimuv-protein-milkshake-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Prikazuje bijelo kartonsko pakiranje napitka GymBeam MoiMüv Protein Milkshake s okusom čokolade (chocolate flavour), zapremnine 250 ml, sa smeđim natpisima i detaljima.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 1,
+      "opis": "Prikazuje bijelo kartonsko pakiranje napitka GymBeam MoiMüv Protein Milkshake s okusom banane (banana flavour), zapremnine 250 ml, sa žutim natpisima i detaljima.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 2,
+      "opis": "Prikazuje kartonsko pakiranje napitka GymBeam Protein Milkshake s okusom kave (coffee flavour), sa smeđim dizajnom koji uključuje zrna kave i mliječni val.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 3,
+      "opis": "Prikazuje kartonsko pakiranje napitka GymBeam Protein Milkshake s okusom vanilije (vanilla flavour), s krem dizajnom koji uključuje cvijet i mahune vanilije.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    }
+  ],
+  "proteinski-chips-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Ambalaža proizvoda GymBeam Protein Popped Chips s okusom morske soli (sea salt) u plavo-bijeloj vrećici od 40 g.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 1,
+      "opis": "Ambalaža proizvoda GymBeam Protein Popped Chips s okusom paprike (paprika) u crveno-bijeloj vrećici od 40 g.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 2,
+      "opis": "Ambalaža proizvoda GymBeam Protein Popped Chips s okusom čilija i limete (chilli & lime) u žuto-bijeloj vrećici od 40 g.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 3,
+      "opis": "Ambalaža proizvoda GymBeam Popped Protein Chips s okusom kiselog vrhnja i luka (sour cream and onion) u zeleno-bijeloj vrećici.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    }
+  ],
+  "100-maslac-od-kikirikija-gymbeam": [
+    {
+      "indeks": 0,
+      "opis": "Packshot ambalaže maslaca od kikirikija GymBeam Peanut Butter, varijanta Crunchy u pakiranju od 340 g, s bijelim čepom i žuto-smeđom etiketom s crvenim pečatom.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 1,
+      "opis": "Packshot ambalaže maslaca od kikirikija GymBeam Peanut Butter, varijanta Smooth u pakiranju od 340 g, s bijelim čepom i žuto-smeđom etiketom s plavim pečatom.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 2,
+      "opis": "Packshot velike staklenke maslaca od kikirikija GymBeam Peanut Butter, varijanta Crunchy u pakiranju od 1000 g, s bijelim čepom i crvenim pečatom na etiketi.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    },
+    {
+      "indeks": 3,
+      "opis": "Packshot velike staklenke maslaca od kikirikija GymBeam Peanut Butter, varijanta Smooth u pakiranju od 1000 g, s bijelim čepom i plavim pečatom na etiketi.",
+      "vrsta": "packshot ambalaže",
+      "pozadina": "bijela",
+      "ima_tekst": true
+    }
+  ]
+}
