@@ -1,0 +1,70 @@
+# FAZA 0 – BRIF (ulazi recepta)
+# Ovo su odgovori na pitanja interaktivnog brifinga (`python -m recept brif`)
+# pripremljeni za demonstraciju. Za drugi brend kopiraj datoteku i promijeni vrijednosti.
+
+brend: GymBeam Hrvatska
+instagram: "@gymbeamhr"                 # https://www.instagram.com/gymbeamhr/
+web_stranica: https://gymbeam.hr
+logo_url: https://gymbeam.hr/static/version170123/frontend/GymBeam/default/hr_HR/images/logo.svg
+web_oznaka: gymbeam.hr
+jezik: hrvatski
+# Boje brenda – provjereno u CSS-u stranice gymbeam.hr (#ff4410 je naglasna narančasta)
+boje:
+  narancasta: "#FF4410"
+  crna: "#111111"
+  svijetla: "#F3F1EE"
+datum_objave: "prosinac 2026."           # kontekst sezone za plan (advent, blagdani, novogodišnje odluke)
+
+zasto_ovaj_brend: >
+  GymBeam je velik europski webshop sportske prehrane s vlastitim proizvodima i aktivnim
+  hrvatskim profilom. Ima bogat, javno dostupan katalog sa strukturiranim podacima
+  (sastav, cijene, recenzije) pa se svaka tvrdnja u objavi može provjeriti, a vlastita
+  ambalaža omogućuje provjeru konzistentnosti logotipa i pakiranja.
+
+# Proizvodi koje korisnik želi promovirati (plan bira koje će koristiti)
+proizvodi:
+  - url: https://gymbeam.hr/advent-kalendar-gymbeam.html
+    napomena: sezonski proizvod, ograničena količina – idealno prije 1. prosinca
+  - url: https://gymbeam.hr/protein-just-whey-gymbeam.html
+    napomena: noviji vlastiti protein (grass-fed), puno činjenica za edukaciju
+    # Glavne slike na webu su promotivni banneri (protein + majica/čarape na poklon).
+    # Da objava ne bi implicirala tu promociju, uzimamo čiste packshote iz galerije okusa.
+    preskoci_glavne_slike: true
+    slike_uzorak: '^just_whey_(chocolate_milkshake|vanilla_icecream|salted_caramel|unflavored)_1_kg_gymbeam_1\.png$'
+  - url: https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html
+  - url: https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html
+    max_slika: 3   # 4. slika prikazuje proizvode drugih brendova (Mornflake, Sante)
+  - url: https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html
+  - url: https://gymbeam.hr/proteinski-chips-gymbeam.html
+  - url: https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html
+max_slika_po_proizvodu: 4
+
+publika: >
+  Rekreativci i početnici u teretani 18–40 godina u Hrvatskoj, studenti i zaposleni koji
+  žele jednostavno unijeti više proteina, te kupci koji traže poklon za nekoga tko trenira.
+
+ciljevi:
+  - Edukacija koja se sprema i dijeli (spremanja, dijeljenja)
+  - Više komentara i interakcije zajednice
+  - Interes za kupnju sezonskog proizvoda (klik na link / posjet webshopu)
+
+ton_i_stil: >
+  Ti-forma, energično i pozitivno, kratke rečenice, malo humora iz svakodnevice teretane.
+  Bez sramoćenja tijela i bez pretjeranih obećanja. Prepoznatljiva GymBeam narančasta,
+  crna i bijela, čisti prikaz ambalaže.
+
+uzori_i_inspiracija: >
+  Jasni edukativni karuseli s velikim brojkama i jednom porukom po slajdu; "ovo ili ono"
+  objave koje potiču komentare; sezonski poklon sadržaj.
+
+ogranicenja:
+  - Ne izmišljati svojstva, cijene ni izjave stvarnih osoba – sve činjenice samo iz izvora.
+  - Cijene navoditi samo uz datum provjere (cijene se mijenjaju, npr. za Black Friday).
+  - Bez zdravstvenih tvrdnji koje nisu navedene na službenoj stranici proizvoda.
+  - Logo, ambalaža i etiketa moraju ostati originalni (koriste se službene fotografije).
+
+# Snimke zaslona Instagram profila i nekoliko objava (priloži korisnik; Instagram
+# bez prijave nije dostupan za automatsko čitanje). Podržani su i glob uzorci.
+instagram_reference:
+  - brief/instagram/*.png
+  - brief/instagram/*.jpg

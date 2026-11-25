@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: "Inter"; font-weight: 400; src: url("{{ fonts }}/Inter-Regular.otf"); }
+@font-face { font-family: "Inter"; font-weight: 600; src: url("{{ fonts }}/Inter-SemiBold.otf"); }
+@font-face { font-family: "Inter"; font-weight: 800; src: url("{{ fonts }}/Inter-ExtraBold.otf"); }
+@font-face { font-family: "Inter"; font-weight: 900; src: url("{{ fonts }}/Inter-Black.otf"); }
+:root {
+  --orange: {{ boje.narancasta }}; --black: {{ boje.crna }}; --white: #ffffff;
+  --light: {{ boje.svijetla }}; --grey: #8a8a8a;
+  --W: {{ W }}px; --H: {{ H }}px;
+  --padX: 84px; --padTop: {{ 96 if not story else 300 }}px; --padBottom: {{ 92 if not story else 330 }}px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: var(--W); height: var(--H); overflow: hidden; }
+body { font-family: "Inter", sans-serif; -webkit-font-smoothing: antialiased; }
+
+.kadar { position: relative; width: var(--W); height: var(--H); overflow: hidden;
+  padding: var(--padTop) var(--padX) var(--padBottom); display: flex; flex-direction: column; }
+.tamna { background: var(--black); color: var(--white); }
+.svijetla { background: var(--light); color: var(--black); }
+.narancasta { background: var(--orange); color: var(--white); }
+
+/* dekorativni geometrijski oblici brenda */
+.deco { position: absolute; border-radius: 50%; pointer-events: none; }
+.tamna .deco { background: var(--orange); opacity: .14; }
+.svijetla .deco { background: var(--orange); opacity: .10; }
+.narancasta .deco { background: #000; opacity: .10; }
+.d1 { width: 760px; height: 760px; right: -330px; top: -300px; }
+.d2 { width: 380px; height: 380px; left: -190px; bottom: -150px; }
+
+.top { position: absolute; left: var(--padX); right: var(--padX); top: {{ 44 if not story else 200 }}px;
+  display: flex; justify-content: space-between; align-items: center; z-index: 5; }
+.logo { height: 40px; }
+.logo svg { height: 40px; width: auto; display: block; }
+.tamna .logo path[fill="black"], .narancasta .logo path[fill="black"] { fill: #fff; }
+.tamna .logo path[fill="white"], .narancasta .logo path[fill="white"] { fill: var(--black); }
+.brojac { font-weight: 600; font-size: 24px; letter-spacing: .08em; opacity: .7; }
+
+.bottom { position: absolute; left: var(--padX); right: var(--padX); bottom: {{ 40 if not story else 230 }}px;
+  display: flex; justify-content: space-between; align-items: center; font-size: 24px; font-weight: 600; z-index: 5; }
+.bottom .web { opacity: .75; letter-spacing: .02em; }
+.swipe { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: 22px; }
+.swipe .arrow { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-size: 30px; }
+.tamna .swipe .arrow, .svijetla .swipe .arrow { background: var(--orange); color: #fff; }
+.narancasta .swipe .arrow { background: #fff; color: var(--orange); }
+
+.sadrzaj { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.nadnaslov { display: inline-block; align-self: flex-start; font-weight: 800; font-size: 26px; letter-spacing: .14em;
+  text-transform: uppercase; padding: 12px 20px; border-radius: 10px; margin-bottom: 30px; }
+.tamna .nadnaslov, .svijetla .nadnaslov { background: var(--orange); color: #fff; }
+.narancasta .nadnaslov { background: #fff; color: var(--orange); }
+h1 { font-weight: 900; font-size: 92px; line-height: 1.0; letter-spacing: -0.035em; }
+h1 .hl { color: var(--orange); }
+.narancasta h1 .hl { color: var(--black); }
+.podnaslov, .tekst { font-size: 36px; line-height: 1.32; font-weight: 400; margin-top: 30px; max-width: 900px; }
+.tamna .tekst, .tamna .podnaslov { color: #e6e6e6; }
+
+.karta { background: #fff; border-radius: 40px; display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative; }
+.karta img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.oznaka { position: absolute; top: 28px; left: 28px; background: var(--orange); color: #fff; font-weight: 900;
+  font-size: 30px; padding: 12px 22px; border-radius: 14px; letter-spacing: -.01em; z-index: 3; }
+.svijetla .karta { box-shadow: 0 20px 60px rgba(0,0,0,.08); }
+
+/* --- naslovna --- */
+.l-naslovna .karta { flex: 1; margin-top: 44px; min-height: 0; padding: 40px; }
+.l-naslovna h1 { font-size: {{ 112 if not story else 120 }}px; }
+
+/* --- brojka --- */
+.l-brojka .broj { font-weight: 900; font-size: 250px; line-height: 1.02; letter-spacing: -0.05em; color: var(--orange); }
+.narancasta.l-brojka .broj { color: #fff; }
+.l-brojka .broj-opis { font-weight: 800; font-size: 48px; line-height: 1.1; margin-top: 18px; letter-spacing: -0.02em; }
+.l-brojka .red { display: flex; gap: 44px; align-items: stretch; flex: 1; min-height: 0; margin-top: 40px; }
+.l-brojka .red .tekst { flex: 1; margin-top: 0; align-self: center; font-size: 38px; }
+.l-brojka .karta { width: 470px; flex: none; padding: 34px; }
+
+/* --- lista --- */
+.l-lista .stavke { margin-top: 44px; display: flex; flex-direction: column; gap: 28px; flex: 1; justify-content: center; }
+.l-lista .stavka { display: flex; gap: 30px; align-items: flex-start; padding: 40px 40px; border-radius: 30px; }
+.tamna .stavka { background: #1f1f1f; } .svijetla .stavka { background: #fff; } .narancasta .stavka { background: rgba(0,0,0,.14); }
+.l-lista .rb { flex: none; width: 76px; height: 76px; border-radius: 50%; background: var(--orange); color: #fff;
+  display: grid; place-items: center; font-weight: 900; font-size: 32px; }
+.narancasta .rb { background: #fff; color: var(--orange); }
+.l-lista .st-naslov { font-weight: 800; font-size: 46px; letter-spacing: -0.02em; line-height: 1.1; }
+.l-lista .st-tekst { font-size: 33px; line-height: 1.3; margin-top: 8px; opacity: .85; }
+
+/* --- proizvod --- */
+.l-proizvod .red { display: flex; gap: 44px; flex: 1; min-height: 0; margin-top: 40px; align-items: center; }
+.l-proizvod .karta { flex: none; width: 500px; height: 100%; max-height: 760px; padding: 36px; }
+.l-proizvod .desno { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.l-proizvod .desno .tekst { margin-top: 0; font-size: 33px; }
+.chips { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
+.chip { font-weight: 800; font-size: 28px; padding: 16px 22px; border-radius: 16px; border: 3px solid var(--orange); line-height: 1.15; }
+.narancasta .chip { border-color: #fff; }
+.l-proizvod h1 { font-size: 84px; }
+
+/* --- anketa --- */
+.l-anketa .opcije { display: flex; gap: 32px; flex: 1; min-height: 0; margin-top: 44px; }
+.l-anketa .opcija { flex: 1; display: flex; flex-direction: column; gap: 18px; min-height: 0; }
+.l-anketa .karta { flex: 1; min-height: 0; padding: 26px; }
+.l-anketa .slovo { position: absolute; top: 22px; left: 22px; width: 76px; height: 76px; border-radius: 50%;
+  background: var(--orange); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 40px; z-index: 3; }
+.l-anketa .op-naziv { font-weight: 800; font-size: 34px; text-align: center; letter-spacing: -0.01em; line-height: 1.15; }
+.l-anketa .vs { align-self: center; font-weight: 900; font-size: 44px; color: var(--orange); }
+.narancasta.l-anketa .vs { color: #fff; }
+.l-anketa .tekst { text-align: center; margin: 26px auto 0; font-weight: 600; }
+
+/* --- tekst --- */
+.l-tekst .sadrzaj { justify-content: center; }
+.l-tekst h1 { font-size: 104px; }
+.l-tekst .tekst { font-size: 40px; }
+
+/* --- cta --- */
+.l-cta .karta { flex: 1; min-height: 0; margin-top: 34px; padding: 26px; }
+.gumb { align-self: flex-start; margin-top: 36px; font-weight: 900; font-size: 36px; padding: 26px 44px; border-radius: 100px;
+  background: var(--orange); color: #fff; letter-spacing: -0.01em; }
+.narancasta .gumb { background: #fff; color: var(--orange); }
+
+/* --- story (9:16): elementi jedan ispod drugog, kartica proizvoda preko cijele širine --- */
+.story.l-brojka .red, .story.l-proizvod .red { flex-direction: column; align-items: stretch; gap: 30px; }
+.story.l-brojka .karta, .story.l-proizvod .karta { width: 100%; flex: 1; min-height: 0; max-height: none; }
+.story.l-brojka .red .tekst { align-self: flex-start; order: -1; flex: none; }
+.story.l-proizvod .desno { flex: none; }
+.story.l-proizvod .chips { flex-direction: row; flex-wrap: wrap; margin-top: 22px; }
+.story .tekst, .story .podnaslov { font-size: 40px; }
+.story.l-brojka .broj { font-size: 300px; }
+
+.ai-pozadina { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
+.ai-pozadina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.15) 45%, rgba(0,0,0,.6)); }
+</style>
+</head>
+<body>
+{% macro naslov(t) %}{{ t | highlight }}{% endmacro %}
+{% macro karta(p, cls="") %}{% if p and p.src %}<div class="karta {{ cls }}">{% if k.oznaka %}<div class="oznaka" data-fit>{{ k.oznaka }}</div>{% endif %}<img src="{{ p.src }}" alt=""></div>{% endif %}{% endmacro %}
+<div class="kadar {{ k.tema }} l-{{ k.layout }}{{ " story" if story }}">
+  {% if k.ai_pozadina_src %}<div class="ai-pozadina" style="background-image:url('{{ k.ai_pozadina_src }}')"></div>{% endif %}
+  <div class="deco d1"></div><div class="deco d2"></div>
+  <div class="top"><div class="logo">{{ logo_svg | safe }}</div>{% if ukupno > 1 %}<div class="brojac">{{ indeks + 1 }}/{{ ukupno }}</div>{% endif %}</div>
+
+  <div class="sadrzaj" data-fit-box>
+  {% if k.nadnaslov %}<div class="nadnaslov">{{ k.nadnaslov }}</div>{% endif %}
+
+  {% if k.layout == "naslovna" %}
+    <h1 data-fit>{{ naslov(k.naslov) }}</h1>
+    {% if k.podnaslov %}<p class="podnaslov">{{ k.podnaslov }}</p>{% endif %}
+    {{ karta(k.proizvod_img) }}
+
+  {% elif k.layout == "brojka" %}
+    <div class="broj">{{ k.brojka.vrijednost }}</div>
+    <div class="broj-opis">{{ k.brojka.opis }}</div>
+    <div class="red">
+      {% if k.tekst %}<p class="tekst">{{ k.tekst }}</p>{% endif %}
+      {{ karta(k.proizvod_img) }}
+    </div>
+
+  {% elif k.layout == "lista" %}
+    <h1 data-fit style="font-size:80px">{{ naslov(k.naslov) }}</h1>
+    <div class="stavke">
+      {% for s in k.stavke %}
+      <div class="stavka"><div class="rb">{{ loop.index }}</div><div>
+        <div class="st-naslov">{{ s.naslov if s is mapping else s }}</div>
+        {% if s is mapping and s.tekst %}<div class="st-tekst">{{ s.tekst }}</div>{% endif %}
+      </div></div>
+      {% endfor %}
+    </div>
+
+  {% elif k.layout == "proizvod" %}
+    <h1 data-fit>{{ naslov(k.naslov) }}</h1>
+    <div class="red">
+      {{ karta(k.proizvod_img) }}
+      <div class="desno">
+        {% if k.tekst %}<p class="tekst">{{ k.tekst }}</p>{% endif %}
+        {% if k.cinjenice %}<div class="chips">{% for c in k.cinjenice %}<div class="chip">{{ c }}</div>{% endfor %}</div>{% endif %}
+      </div>
+    </div>
+
+  {% elif k.layout == "anketa" %}
+    <h1 data-fit style="font-size:88px">{{ naslov(k.naslov) }}</h1>
+    <div class="opcije">
+      {% for o in k.opcije %}
+        {% if not loop.first %}<div class="vs">ili</div>{% endif %}
+        <div class="opcija">
+          <div class="karta"><div class="slovo">{{ o.oznaka }}</div>{% if o.proizvod_img %}<img src="{{ o.proizvod_img.src }}" alt="">{% endif %}</div>
+          <div class="op-naziv">{{ o.naziv }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if k.tekst %}<p class="tekst">{{ k.tekst }}</p>{% endif %}
+
+  {% elif k.layout == "cta" %}
+    <h1 data-fit>{{ naslov(k.naslov) }}</h1>
+    {% if k.tekst %}<p class="tekst">{{ k.tekst }}</p>{% endif %}
+    {{ karta(k.proizvod_img) }}
+    {% if k.gumb %}<div class="gumb">{{ k.gumb }}</div>{% endif %}
+
+  {% else %}
+    <h1 data-fit>{{ naslov(k.naslov) }}</h1>
+    {% if k.tekst %}<p class="tekst">{{ k.tekst }}</p>{% endif %}
+  {% endif %}
+  </div>
+
+  <div class="bottom">
+    <div class="web">{{ web }}</div>
+    {% if format == "karusel" and indeks + 1 < ukupno %}<div class="swipe">Dalje <span class="arrow">→</span></div>{% endif %}
+  </div>
+</div>
+</body>
+</html>

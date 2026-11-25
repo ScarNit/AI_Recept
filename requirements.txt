@@ -1,0 +1,7 @@
+requests>=2.31
+PyYAML>=6.0
+beautifulsoup4>=4.12
+Pillow>=10.0
+numpy>=1.26
+Jinja2>=3.1
+playwright>=1.45
