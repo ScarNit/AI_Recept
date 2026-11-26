@@ -17,6 +17,13 @@ import re
 RISKY = ["nadut", "želuc", "probavne tegobe", "lakša probava", "lakšu probavu", "mršav", "skidanje kila", "detoks", "detox", "liječ", "imunitet", "spaljuje", "sagorijeva",
          "topi masno", "ubrzava metabolizam", "garantira", "zajamčen", "bez nuspojava", "čudesn"]
 
+# Oblici 2. lica jednine. Ako brend piše s "vi", njihova pojava je greška (dodano nakon što su
+# prve verzije objava bile u ti-formi, a analiza Instagrama pokazala da brend piše s "vi").
+TI_FORMA = re.compile(
+    r"\b(tvoj\w*|tebi|tebe|tobom|ti\b|si\b|spremi|napiši|podijeli|osiguraj|saznaj|klikni|počasti|"
+    r"pripremi|otvori|ugrabi|isprobaj|probaj|naruči|označi|pošalji|odaberi|biraš|znaš|želiš|"
+    r"dobivaš|trebaš|možeš|imaš|voliš|ostavi|pogledaj|zaviri|javi|kupi|uzmi|iskoristi|prati|uživaj)\b", re.I)
+
 LIMITS = {"nadnaslov": 28, "naslov": 48, "podnaslov": 160, "tekst": 160, "gumb": 24, "oznaka": 24}
 NUM = re.compile(r"(?<![\w#])(\d{1,3}(?:[ .]\d{3})+|\d+)(?:[.,](\d+))?")
 
@@ -64,6 +71,10 @@ def _post_texts(post: dict) -> list[tuple[str, str]]:
             items.append((f"kadar {i}.cinjenica", str(c)))
         for o in k.get("opcije") or []:
             items.append((f"kadar {i}.opcija", str(o.get("naziv", ""))))
+        st = k.get("story_naljepnica")
+        if isinstance(st, dict):
+            vals = [st.get("tekst"), st.get("pitanje")] + list(st.get("opcije") or [])
+            items.append((f"kadar {i}.naljepnica", " ".join(str(v) for v in vals if v)))
     items.append(("opis", post.get("opis", "")))
     return items
 
@@ -74,8 +85,15 @@ def corpus_text(sources: dict) -> str:
 
 
 def check_post(post: dict, corpus: set[str], render_report: list | None, product_ids: set[str],
-               source_text: str = "") -> dict:
+               source_text: str = "", oblik: str = "") -> dict:
     problems, warnings = [], []
+
+    if oblik.startswith("vi"):
+        ti = []
+        for where, txt in _post_texts(post):
+            ti += [f"„{m.group(0)}” ({where})" for m in TI_FORMA.finditer(txt)]
+        if ti:
+            problems.append("Ti-forma, a brend piše s 'vi': " + ", ".join(ti[:12]) + (" …" if len(ti) > 12 else ""))
 
     all_text = " ".join(t for _, t in _post_texts(post)).lower()
     risky = [w for w in RISKY if w in all_text and w not in source_text]

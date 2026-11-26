@@ -1,100 +1,97 @@
 {
-  "sazetak": "GymBeam Hrvatska je aktivni hrvatski profil velikog europskog webshopa sportske prehrane s preko 10.000 proizvoda na zalihi. Komunicira energično i informativno, kombinirajući prikaz vlastitih proizvoda, fitnes opreme i odjeće s edukativnim i lifestyle sadržajem.",
+  "sazetak": "GymBeam Hrvatska je veliki europski 'one-stop shop' za sportaše koji komunicira kao energičan, moderan i pristupačan partner u fitnessu. Fokus im je na spoju prehrane, opreme i lifestylea, koristeći dinamičan video sadržaj i edukativni pristup.",
   "publika": [
-    "Rekreativci i početnici u teretani 18–40 godina u Hrvatskoj",
-    "Studenti i zaposleni koji žele jednostavno unijeti više proteina",
-    "Kupci koji traže poklon za nekoga tko trenira"
+    "Rekreativci i početnici u teretani (18–40 godina)",
+    "Studenti i zaposleni koji traže praktične izvore proteina",
+    "Kupci koji traže fit poklone",
+    "Osobe zainteresirane za fitness inspiraciju i zdrave recepte"
   ],
   "ton_glasa": {
-    "opis": "Energično i pozitivno obraćanje u množini (vi) s kratkim rečenicama i dozom humora iz svakodnevice teretane.",
+    "opis": "Energičan, pozitivan i motivirajuć, s dozom svakodnevnog humora i fokusom na zajednicu. Izbjegava agresivni marketing i sramoćenje tijela.",
     "primjeri_fraza": [
       "Pratite nas za fitness inspiraciju",
       "Uživajte u besplatnoj dostavi",
       "Spakirajte sa mnom moje dnevne vitamine"
     ],
     "izbjegavati": [
+      "Zdravstvene tvrdnje bez izvora",
       "Sramoćenje tijela",
-      "Pretjerana obećanja i nerealne zdravstvene tvrdnje"
+      "Pretjerana obećanja o rezultatima",
+      "Službeni, hladan korporativni ton"
     ]
   },
   "teme": [
-    "Prehrana i dodaci prehrani",
-    "Fitnes oprema i odjeća",
-    "Recepti i lifestyle u teretani",
-    "Sezonske ponude i poklon paketi"
+    "Fitness inspiracija",
+    "Edukacija o suplementima i njihovoj namjeni",
+    "Recepti s proteinima",
+    "Recenzije i 'unboxing' proizvoda",
+    "Sezonski pokloni (npr. Adventski kalendar)",
+    "Outfiti za trening"
   ],
   "vizualni_stil": {
     "boje": [
-      "#FF4410 – prepoznatljiva GymBeam narančasta za naglaske i logo",
-      "#111111 – crna pozadina i elementi",
-      "#F3F1EE – svijetla pozadina"
+      "#FF4410 – primarna narančasta (energija, prepoznatljivost)",
+      "#111111 – crna (kontrast, snaga)",
+      "#F3F1EE – svijetla/bijela (čistoća, pozadina)"
     ],
-    "tipografija": "Čisti i jednostavni fontovi prilagođeni društvenim mrežama",
-    "prikaz_proizvoda": "Čisti prikaz originalne ambalaže, pakiranja i sezonskih proizvoda poput adventskog kalendara",
-    "osobe": "Stvarni fitness influenceri i ambasadori brenda u teretani, kuhinji ili lifestyle okruženju",
+    "tipografija": "Moderna, bezserifna, s naglašenim ključnim riječima u videima (overlay tekst).",
+    "prikaz_proizvoda": "Kombinacija čistih studijskih fotografija ambalaže i 'lifestyle' prikaza u rukama korisnika/influencera.",
+    "osobe": "Čest prikaz fit osoba, trenera i influencera u prirodnim okruženjima (teretana, kuhinja).",
     "opazeno_na_instagramu": [
-      "Na prvoj snimci profila vidljivo je da profil ima 42,2K pratitelja, 7.815 objavljenih postova te istaknute priče: Zajednica, Novosti, Članci, Recepti i Outfiti.",
-      "Na drugoj snimci feeda vidljivo je pretezito korištenje reels formata (oznaka s ikonom videoprikaza na većini objavljenih kvadrata) uz dinamične videozapise s ambasadorima i proizvodima."
+      "Dominacija Reels formata (vidljive ikone playa na većini objava) – snimka 2",
+      "Korištenje UGC-stila (User Generated Content) i 'vlog' estetike u videima – snimka 2",
+      "Istaknute priče (Highlights) s jasno definiranim kategorijama: Zajednica, Novosti, Članci, Recepti, Outfiti – snimka 1",
+      "Korištenje grafičkih elemenata i AI/digitalne umjetnosti za tematske objave (npr. Halloween/bundeva) – snimka 2"
     ]
   },
   "provjereni_podaci": [
     {
-      "tvrdnja": "GymBeam ima više od 10.000 proizvoda na zalihi.",
-      "izvor": "https://gymbeam.hr"
-    },
-    {
-      "tvrdnja": "Adventski kalendar GymBeam sadrži 24 prozorčića i stoji 81.95 EUR.",
+      "tvrdnja": "Adventski kalendar sadrži 24 iznenađenja, uključujući proteinske pločice, šejker, uzorke proteina i vitamine.",
       "izvor": "https://gymbeam.hr/advent-kalendar-gymbeam.html"
     },
     {
-      "tvrdnja": "Just Whey je protein sirutke iz mlijeka krava koje pasu travu, a cijena za 500 g kreće se od 26.95 EUR.",
+      "tvrdnja": "Just Whey protein sadrži najmanje 22 g bjelančevina i 6,5 g BCAA u dozi od 30 g.",
       "izvor": "https://gymbeam.hr/protein-just-whey-gymbeam.html"
     },
     {
-      "tvrdnja": "Proteinska pločica MoiMüv ima cijenu od 1.69 EUR do 1.80 EUR ovisno o okusu.",
-      "izvor": "https://gymbeam.hr/proteinska-plocica-moimuv-gymbeam.html"
-    },
-    {
-      "tvrdnja": "Proteinski namaz MoiMüv u pakiranju od 400 g iznosi 10.5 EUR.",
-      "izvor": "https://gymbeam.hr/proteinski-namaz-moimuv-gymbeam.html"
-    },
-    {
-      "tvrdnja": "25g Protein Milkshake od 250 ml ima cijenu 1.95 EUR.",
-      "izvor": "https://gymbeam.hr/moimuv-protein-milkshake-gymbeam.html"
-    },
-    {
-      "tvrdnja": "Proteinski čips GymBeam od 40 g stoji 1.3 EUR.",
+      "tvrdnja": "Proteinski čips je veganski, prirodno bez glutena i sadrži manje od 10 % masti.",
       "izvor": "https://gymbeam.hr/proteinski-chips-gymbeam.html"
     },
     {
-      "tvrdnja": "Maslac od kikirikija GymBeam od 340 g iznosi 3.1 EUR, a od 1000 g stoji 7.2 EUR.",
+      "tvrdnja": "Maslac od kikirikija ne sadrži dodani šećer, sol niti palmino ulje.",
       "izvor": "https://gymbeam.hr/100-maslac-od-kikirikija-gymbeam.html"
     }
   ],
   "pretpostavke": [
     {
-      "tvrdnja": "Frekvencija objavljivanja objava na Instagramu je svakodnevna s obzirom na visok ukupan broj postova.",
-      "zasto": "Vidljiv je velik broj objava (7.815 postova) u biografiji profila."
+      "tvrdnja": "Brend preferira video sadržaj (Reels) nad statičnim slikama za angažman publike.",
+      "zasto": "Na snimci 2 većina vidljivih objava u feedu su videi."
     }
   ],
-  "nedostupni_izvori": [
-    "Točne metrike dosega i angažmana pojedinačnih objava (insights nisu javno dostupni)."
-  ],
+  "nedostupni_izvori": [],
   "oblik_obracanja": {
     "oblik": "vi",
     "primjeri": [
-      "Pratite nas za fitness inspiraciju",
-      "Uživajte u besplatnoj dostavi",
-      "Spakirajte sa mnom moje dnevne vitamine"
+      "Vi imate dvadeset četiri razloga za veselje (web)",
+      "Uživajte u besplatnoj dostavi (snimka 2)",
+      "Pratite nas za fitness inspiraciju (snimka 1)"
     ]
   },
-  "nesuglasja_s_brifom": [],
+  "nesuglasja_s_brifom": [
+    {
+      "brif": "Obraćanje u množini (vi, malim slovom)",
+      "opazeno": "Na webu se koristi 'Vi' s velikim slovom u opisima proizvoda (npr. 'Vi imate dvadeset četiri razloga').",
+      "preporuka": "Za Instagram zadržati malim slovom 'vi' radi manjeg formalizma i bolje prilagođenosti mlađoj publici (18-40), kao što je i traženo u brifu."
+    }
+  ],
   "prilike": [
-    "Iskorištavanje blagdanskog razdoblja u prosincu 2026. za promociju adventskog kalendara i prigodnih poklon paketa",
-    "Edukacija publike o sastojcima novijeg Just Whey proteina putem karusela koji se spremaju i dijele"
+    "Promocija Adventskog kalendara kao idealnog poklona za fit osobe prije 1. prosinca",
+    "Edukativni Reels o razlici između Just Whey i običnih proteina (grass-fed prednosti)",
+    "Interaktivne 'ovo ili ono' objave s okusima MoiMüv pločica i namaza",
+    "Božićni recepti koji koriste proteinski namaz i maslac od kikirikija"
   ],
   "rizici": [
-    "Moguće promjene cijena sezonskih proizvoda i zaliha ako se ne provjere točni podaci u trenutku objave",
-    "Nevažeće zdravstvene tvrdnje ako se odstupljuje od službenih opisa proizvoda s webshopa"
+    "Kratak rok za prodaju sezonskog proizvoda (kalendar) zbog ograničene količine",
+    "Mogućnost zabune oko cijena ako se ne navede datum provjere zbog dinamičkih promjena (npr. Black Friday)"
   ]
 }

@@ -14,20 +14,11 @@
       "datoteka": "runs/gymbeam_hr/isporuka/objava_1/kadar_02.png",
       "smanjen_naslov_posto": [],
       "problemi": [],
-      "fotografije": [
-        "assets/proizvodi/protein-just-whey-gymbeam/just_whey_salted_caramel_1_kg_gymbeam_1.png"
-      ]
+      "fotografije": []
     },
     {
       "kadar": 3,
       "datoteka": "runs/gymbeam_hr/isporuka/objava_1/kadar_03.png",
-      "smanjen_naslov_posto": [],
-      "problemi": [],
-      "fotografije": []
-    },
-    {
-      "kadar": 4,
-      "datoteka": "runs/gymbeam_hr/isporuka/objava_1/kadar_04.png",
       "smanjen_naslov_posto": [],
       "problemi": [],
       "fotografije": [
@@ -35,12 +26,19 @@
       ]
     },
     {
+      "kadar": 4,
+      "datoteka": "runs/gymbeam_hr/isporuka/objava_1/kadar_04.png",
+      "smanjen_naslov_posto": [],
+      "problemi": [],
+      "fotografije": []
+    },
+    {
       "kadar": 5,
       "datoteka": "runs/gymbeam_hr/isporuka/objava_1/kadar_05.png",
       "smanjen_naslov_posto": [],
       "problemi": [],
       "fotografije": [
-        "assets/proizvodi/protein-just-whey-gymbeam/just_whey_vanilla_icecream_1_kg_gymbeam_1.png"
+        "assets/proizvodi/protein-just-whey-gymbeam/just_whey_salted_caramel_1_kg_gymbeam_1.png"
       ]
     }
   ],
@@ -80,9 +78,7 @@
       "datoteka": "runs/gymbeam_hr/isporuka/objava_3/kadar_03.png",
       "smanjen_naslov_posto": [],
       "problemi": [],
-      "fotografije": [
-        "assets/proizvodi/advent-kalendar-gymbeam/advent_calendar_001.png"
-      ]
+      "fotografije": []
     },
     {
       "kadar": 4,
@@ -90,7 +86,7 @@
       "smanjen_naslov_posto": [],
       "problemi": [],
       "fotografije": [
-        "assets/proizvodi/advent-kalendar-gymbeam/99394-all-advent_calendar_mockup_view2.jpg"
+        "assets/proizvodi/advent-kalendar-gymbeam/advent_calendar_001.png"
       ]
     }
   ]

@@ -15,8 +15,8 @@
     "izlaz": "02_opis_slika.json"
   },
   "analiza": {
-    "zavrseno": "2026-11-25 19:34:43",
-    "sekundi": 13.6,
+    "zavrseno": "2026-11-26 08:33:24",
+    "sekundi": 132.8,
     "izlaz": "03_analiza.json"
   },
   "plan": {
@@ -25,23 +25,23 @@
     "izlaz": "04_plan.json"
   },
   "izrada": {
-    "zavrseno": "2026-11-25 19:18:29",
-    "sekundi": 165.6,
+    "zavrseno": "2026-11-26 08:38:28",
+    "sekundi": 167.7,
     "izlaz": "05_sadrzaj.json"
   },
   "render": {
-    "zavrseno": "2026-11-25 19:40:16",
-    "sekundi": 7.5,
+    "zavrseno": "2026-11-26 08:42:54",
+    "sekundi": 7.8,
     "izlaz": "06_render.json"
   },
   "provjera": {
-    "zavrseno": "2026-11-25 19:21:14",
-    "sekundi": 107.7,
+    "zavrseno": "2026-11-26 08:41:55",
+    "sekundi": 169.2,
     "izlaz": "07_provjera.json"
   },
   "isporuka": {
-    "zavrseno": "2026-11-25 19:22:44",
-    "sekundi": 0.3,
+    "zavrseno": "2026-11-26 08:42:11",
+    "sekundi": 0.5,
     "izlaz": "isporuka/README.md"
   }
 }

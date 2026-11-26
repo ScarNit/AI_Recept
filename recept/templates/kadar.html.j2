@@ -101,8 +101,10 @@ h1 .hl { color: var(--orange); }
 .l-anketa .opcije { display: flex; gap: 32px; flex: 1; min-height: 0; margin-top: 44px; }
 .l-anketa .opcija { flex: 1; display: flex; flex-direction: column; gap: 18px; min-height: 0; }
 .l-anketa .karta { flex: 1; min-height: 0; padding: 26px; }
-.l-anketa .slovo { position: absolute; top: 22px; left: 22px; width: 76px; height: 76px; border-radius: 50%;
-  background: var(--orange); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 40px; z-index: 3; }
+.l-anketa .slovo { position: absolute; top: 22px; left: 22px; min-width: 76px; height: 76px; padding: 0 22px;
+  border-radius: 40px; white-space: nowrap; background: var(--orange); color: #fff; display: grid;
+  place-items: center; font-weight: 900; font-size: 40px; z-index: 3; }
+.l-anketa .slovo.dugo { font-size: 26px; height: 60px; letter-spacing: .06em; }
 .l-anketa .op-naziv { font-weight: 800; font-size: 34px; text-align: center; letter-spacing: -0.01em; line-height: 1.15; }
 .l-anketa .vs { align-self: center; font-weight: 900; font-size: 44px; color: var(--orange); }
 .narancasta.l-anketa .vs { color: #fff; }
@@ -192,7 +194,7 @@ h1 .hl { color: var(--orange); }
       {% for o in k.opcije %}
         {% if not loop.first %}<div class="vs">ili</div>{% endif %}
         <div class="opcija">
-          <div class="karta"><div class="slovo">{{ o.oznaka }}</div>{% if o.proizvod_img %}<img src="{{ o.proizvod_img.src }}" alt="">{% endif %}</div>
+          <div class="karta"><div class="slovo{{ ' dugo' if (o.oznaka or '')|length > 2 }}">{{ o.oznaka }}</div>{% if o.proizvod_img %}<img src="{{ o.proizvod_img.src }}" alt="">{% endif %}</div>
           <div class="op-naziv">{{ o.naziv }}</div>
         </div>
       {% endfor %}

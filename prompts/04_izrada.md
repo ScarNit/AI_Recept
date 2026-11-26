@@ -4,6 +4,11 @@ Napiši kompletan sadržaj za jednu objavu prema PLANU. Grafika se slaže automa
 predložaka (boje i logo brenda) i SLUŽBENIH fotografija proizvoda, pa ti biraš raspored
 svakog kadra i pišeš sav tekst.
 
+OBLIK OBRAĆANJA (obavezno, utvrđeno u analizi brenda):
+{oblik_obracanja}
+Sav tekst – kadrovi, opis, naljepnice, gumbi – mora biti u tom obliku. Ako je oblik "vi",
+piši "spremite", "napišite", "vaš", "vama", malim slovom; nikad "spremi", "tvoj", "ti".
+
 PLAN OVE OBJAVE:
 {plan_objave}
 
@@ -27,7 +32,7 @@ DOSTUPNI RASPOREDI KADRA ("layout"):
 Polje "proizvod" ima oblik {{"id": "<id proizvoda>", "slika": <indeks fotografije>}}.
 Polje "tema" je "tamna", "svijetla" ili "narancasta" – izmjenjuj ih s mjerom (brend: crna,
 bijela, narančasta #FF4410). U naslovu riječ ili dvije koje treba istaknuti narančastom
-okruži zvjezdicama, npr. "Koliko *proteina* trebaš?".
+okruži zvjezdicama, npr. "Koliko *proteina* trebate?".
 
 Pravila za izbor rasporeda:
 - Ako plan uspoređuje dva proizvoda ili traži glasanje ("ovo ili ono", "slano ili slatko"),
@@ -45,9 +50,11 @@ Pravila za tekst na grafici:
 - Brojke i svojstva samo iz izvora. Cijenu navedi samo ako je u izvorima, uz "{datum_cijena}".
 - Za "story": prvi i zadnji kadar imaju jasnu radnju (anketa / "klikni link"); u polju
   "story_naljepnica" predloži interaktivnu naljepnicu (anketa, kviz, link) za taj kadar.
+- Prije vraćanja odgovora pročitaj sav tekst još jednom: pravopis (č/ć, dž/đ), padeži, oblik
+  obraćanja i prirodnost rečenica.
 
 Opis objave (caption): 400–1200 znakova, prva rečenica je udica, kratki odlomci, jasan
-poziv na radnju usklađen s ciljem ("spremi", "napiši u komentar", "link u biou"),
+poziv na radnju usklađen s ciljem (npr. "spremite", "napišite u komentar", "link u biou"),
 5–10 relevantnih hashtagova (mješavina hrvatskih i brendiranih, npr. #gymbeam).
 
 Vrati JSON:

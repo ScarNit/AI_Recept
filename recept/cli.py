@@ -176,8 +176,11 @@ class Run:
                 fb = ("\n\nPOVRATNA INFORMACIJA IZ PROVJERE PRETHODNE VERZIJE (obavezno uvaži):\n" +
                       json.dumps(feedback[n], ensure_ascii=False, indent=1))
             print(f"  · objava {n}: {obj.get('naziv', '')}")
+            ob = analysis.get("oblik_obracanja") or {}
+            oblik = (f"{ob.get('oblik', '')} – primjeri brenda: " + " / ".join(ob.get("primjeri", [])) if ob else "") \
+                + f"\nTon iz brifa: {brief.get('ton_i_stil', '').strip()}"
             res = self.llm.chat_json(self.system, prompt(
-                "04_izrada.md", broj=n, format=obj.get("format", "karusel"),
+                "04_izrada.md", broj=n, format=obj.get("format", "karusel"), oblik_obracanja=oblik,
                 plan_objave=json.dumps(obj, ensure_ascii=False, indent=1),
                 analiza=json.dumps({k: analysis.get(k) for k in ("sazetak", "ton_glasa", "vizualni_stil", "publika")},
                                    ensure_ascii=False, indent=1),
@@ -203,6 +206,7 @@ class Run:
         plan = {o["broj"]: o for o in self.load("plan")["objave"]}
         corpus = checks.corpus_numbers(sources, brief)
         src_text = checks.corpus_text(sources)
+        oblik = ((self.load("analiza").get("oblik_obracanja") or {}).get("oblik") or "").strip().lower()
         ids = {p["id"] for p in sources["proizvodi"]}
         result = jload(self.path("provjera")) if self.path("provjera").exists() else {}
         auto_fix = self.cfg.get("provjera", {}).get("automatski_popravak", True)
@@ -212,13 +216,13 @@ class Run:
             if self.only and n not in self.only:
                 continue
             render_rep = {int(k): v for k, v in self.load("render").items()}.get(n, [])
-            auto = checks.check_post(post, corpus, render_rep, ids, src_text)
+            auto = checks.check_post(post, corpus, render_rep, ids, src_text, oblik)
             critic = self._critic(post, plan.get(n, {}), auto, sources, render_rep)
             entry = {"automatske": auto, "ai_kritika": critic, "popravljeno": []}
 
             if auto_fix and (critic.get("ispravci") or critic.get("ispravci_opisa") or auto["greske"]):
                 fixed, applied = apply_fixes(post, critic)
-                fixed_auto = checks.check_post(fixed, corpus, None, ids, src_text)
+                fixed_auto = checks.check_post(fixed, corpus, None, ids, src_text, oblik)
                 new_unsourced = [w for w in fixed_auto["upozorenja"] if w.startswith("Brojke")]
                 old_unsourced = [w for w in auto["upozorenja"] if w.startswith("Brojke")]
                 if applied and (len(" ".join(new_unsourced)) <= len(" ".join(old_unsourced))):
@@ -229,7 +233,7 @@ class Run:
                     self.render()
                     self.only = saved
                     render_rep = {int(k): v for k, v in self.load("render").items()}.get(n, [])
-                    entry["automatske_nakon_popravka"] = checks.check_post(fixed, corpus, render_rep, ids, src_text)
+                    entry["automatske_nakon_popravka"] = checks.check_post(fixed, corpus, render_rep, ids, src_text, oblik)
                     entry["ai_kritika_nakon_popravka"] = self._critic(fixed, plan.get(n, {}),
                                                                       entry["automatske_nakon_popravka"],
                                                                       sources, render_rep, suffix="_2")

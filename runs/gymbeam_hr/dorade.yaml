@@ -1,0 +1,63 @@
+# Ljudske dorade verzije 2 (vi-forma), nakon AI izrade i AI provjere, 26. 11. 2026.
+# python -m recept dorada --run runs/gymbeam_hr --datoteka runs/gymbeam_hr/dorade.yaml
+- objava: 2
+  kadar: 1
+  polje: nadnaslov
+  novo: Nakon kasnog treninga
+  razlog: "\"Kasni trening delikatesa\" je nespretan i negramatičan izraz."
+- objava: 2
+  kadar: 1
+  polje: tekst
+  novo: Koji je vaš izbor za večernji snack? Napišite u komentar!
+  razlog: "\"Koji neće narušiti vaše fit ciljeve\" implicira učinak koji izvor ne navodi; dodan jasan poziv na komentar (cilj objave)."
+- objava: 2
+  polje: opis
+  novo: |-
+    Završili ste kasni trening i otvarate kuhinjske ormariće. Što prvo birate – hrskavo slano ili kremasto slatko? 🤔
+
+    Ako ste u Timu Slano, tu je Proteinski čips. Priprema se ekspandiranjem vrućim zrakom i sadrži manje od 10 % masti, a u 100 g ima 21 g biljnih proteina.
+
+    Ako glasate za Tim Slatko, vaš je favorit MoiMüv Proteinski namaz. Izvor je proteina, ne sadrži dodani šećer i odlično ide na palačinke, tost ili ravno sa žlice.
+
+    Nema krivog odgovora! Napišite nam u komentar – Tim Slano ili Tim Slatko? 👇
+  razlog: Uklonjeni izrazi koji impliciraju učinak ("ne mora značiti kompromis s vašim fit ciljevima", "uživati bez brige"); dodana doslovna činjenica iz izvora (21 g biljnih proteina na 100 g).
+- objava: 2
+  polje: hashtagovi
+  novo: ["#gymbeam", "#gymbeamhr", "#fitprehrana", "#proteinskičips", "#moimuv", "#fitnesshrvatska", "#proteinskisnack", "#slanoilislatko"]
+  razlog: "#zdravisnack implicira zdravstvenu tvrdnju (uklonjen i u verziji 1); #proteinskicips → #proteinskičips."
+- objava: 3
+  kadar: 1
+  polje: story_naljepnica.opcije
+  novo: ["Spreman/na sam!", "Jedva čekam!"]
+  razlog: "\"Pretspreman/na\" nije hrvatska riječ."
+- objava: 3
+  kadar: 3
+  polje: stavke
+  novo:
+    - {naslov: Proteini i snackovi, tekst: Proteinske pločice, keksi i napitci za svaki dan u prosincu.}
+    - {naslov: Vitamini i dodaci, tekst: Vitamini i dodaci prehrani koji su najkorisniji zimi.}
+    - {naslov: Ograničena serija, tekst: Količine su ograničene i novih više neće biti.}
+  razlog: "\"Podrška za zimske dane\" parafrazira izvor u smjeru zdravstvene tvrdnje; vraćeno na doslovno \"najkorisniji zimi\"."
+- objava: 3
+  kadar: 4
+  polje: naslov
+  novo: Osigurajte *svoj* kalendar
+  razlog: Povratno-posvojna zamjenica "svoj" umjesto "vaš" (napomena AI kritičara, nije bila automatski primijenjena).
+- objava: 3
+  kadar: 4
+  polje: story_naljepnica.tekst
+  novo: Kupite kalendar
+  razlog: Ti-forma na naljepnici; provjera sada čita i tekst naljepnica.
+- objava: 3
+  polje: opis
+  novo: |-
+    Jingle Bells, Jingle Bells… Božić se brzo bliži, a vi imate 24 razloga za veselje! 🎄✨
+
+    GymBeam Adventski kalendar iza svakog od 24 prozorčića skriva iznenađenje – za svaki dan do Badnjaka. Unutra vas čekaju naši najpopularniji proizvodi: proteinske pločice, keksi i druge poslastice, vitamini i dodaci prehrani te napitci koji će vam dobro doći u predbožićnoj užurbanosti.
+
+    Kalendara imamo samo ograničen broj i novih više neće biti, stoga ne čekajte posljednji trenutak.
+
+    Cijena: 81,95 € (na gymbeam.hr, 25. 11. 2026.)
+
+    Kliknite na poveznicu u storyju i osigurajte svoj kalendar na vrijeme. 🎁
+  razlog: AI kritičar je prebacio obraćanje u veliko "Vi/Vam" (brif traži malo slovo); "iznenađenje za svaki prosinac" → "za svaki dan do Badnjaka"; dodana cijena s datumom iz izvora.
