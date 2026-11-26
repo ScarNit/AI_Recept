@@ -130,17 +130,18 @@ h1 .hl { color: var(--orange); }
 .story .tekst, .story .podnaslov { font-size: 40px; }
 .story.l-brojka .broj { font-size: 300px; }
 
-/* --- kadar s AI pozadinom: scena ostaje vidljiva, kartica proizvoda manja i na dnu --- */
+/* --- kadar s AI pozadinom: motiv scene je u gornjem dijelu, tekst i kartica proizvoda dolje --- */
 .ai .deco { display: none; }
-.ai.l-naslovna .karta, .ai.l-cta .karta { flex: none; height: 42%; margin-top: auto; width: 62%;
-  align-self: center; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
-.ai.story.l-naslovna .karta, .ai.story.l-cta .karta { height: 38%; width: 72%; }
-.ai.l-cta .gumb { align-self: center; }
+.ai.l-naslovna .sadrzaj, .ai.l-cta .sadrzaj { justify-content: flex-end; }
+.ai.l-naslovna .karta, .ai.l-cta .karta { flex: none; height: 30%; margin-top: 34px; width: 62%;
+  align-self: flex-start; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+.ai.story.l-naslovna .karta, .ai.story.l-cta .karta { height: 31%; width: 74%; padding: 30px; }
+.ai.l-naslovna h1 { font-size: 96px; }
 .ai.l-cta .gumb { margin-top: 30px; }
-.ai h1, .ai .podnaslov, .ai .tekst { text-shadow: 0 2px 18px rgba(0,0,0,.55); }
+.ai h1, .ai .podnaslov, .ai .tekst { text-shadow: 0 2px 18px rgba(0,0,0,.6); }
 
 .ai-pozadina { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; }
-.ai-pozadina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.25) 38%, rgba(0,0,0,.15) 55%, rgba(0,0,0,.7) 100%); }
+.ai-pozadina::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 14%, rgba(0,0,0,0) 38%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.8) 100%); }
 </style>
 </head>
 <body>

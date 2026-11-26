@@ -30,8 +30,8 @@
     "izlaz": "05_sadrzaj.json"
   },
   "render": {
-    "zavrseno": "2026-11-26 08:42:54",
-    "sekundi": 7.8,
+    "zavrseno": "2026-11-26 08:55:17",
+    "sekundi": 4.5,
     "izlaz": "06_render.json"
   },
   "provjera": {
@@ -40,8 +40,8 @@
     "izlaz": "07_provjera.json"
   },
   "isporuka": {
-    "zavrseno": "2026-11-26 08:44:05",
-    "sekundi": 0.4,
+    "zavrseno": "2026-11-26 08:55:33",
+    "sekundi": 0.5,
     "izlaz": "isporuka/README.md"
   }
 }

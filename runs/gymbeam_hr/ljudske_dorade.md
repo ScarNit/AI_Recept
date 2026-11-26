@@ -144,3 +144,12 @@ analize i ton iz brifa, primjeri su u vi-formi, a `provjera.py` ima novu determi
 provjeru (oblici 2. lica jednine su greška kad brend piše s „vi”, uključujući naljepnice).
 Ta je provjera u istom pokretanju uhvatila gumb „Kupi na webshopu”, koji je AI kritičar zatim
 ispravio u „Kupite na webshopu”.
+
+## AI pozadinske scene (26. 11. 2026.)
+- Prijedlozi iz faze izrade (`ai_scena_prompt`) bili su generički; ljudski su dorađeni u
+  `ai_scene.yaml` prema snimkama Instagrama (feed koristi AI-stilizirane vizuale, npr. licitar).
+- `python -m recept scene` je iz njih napravio `ai_slike/PROMPTOVI.md`; tri slike generirane su
+  ručno u ChatGPT-u (Plus) i spremljene kao `objava1_kadar1.png`, `objava3_kadar1.png`,
+  `objava3_kadar4.png`. Provjereno: bez teksta i logotipa, donja polovica tamna.
+- Predložak je prilagođen: na kadrovima s AI pozadinom tekst i kartica proizvoda idu u donji dio,
+  a motiv scene ostaje vidljiv na vrhu. Proizvod je i dalje originalna fotografija s webshopa.
