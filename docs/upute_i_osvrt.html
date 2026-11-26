@@ -9,7 +9,7 @@
 @font-face { font-family: Inter; font-weight: 800; src: url("../recept/fonts/Inter-ExtraBold.otf"); }
 @page { size: A4; margin: 13mm 14mm 12mm; }
 * { box-sizing: border-box; }
-body { font-family: Inter, sans-serif; font-size: 8.6pt; line-height: 1.38; color: #1a1a1a; margin: 0; }
+body { font-family: Inter, sans-serif; font-size: 8.15pt; line-height: 1.32; color: #1a1a1a; margin: 0; }
 h1 { font-size: 17pt; font-weight: 800; margin: 0 0 1mm; letter-spacing: -.02em; }
 h1 span { color: #FF4410; }
 .sub { color: #555; margin-bottom: 3mm; }
@@ -24,7 +24,7 @@ th, td { text-align: left; vertical-align: top; padding: .9mm 1.4mm; border-bott
 th { background: #111; color: #fff; font-weight: 600; }
 .posts { display: flex; gap: 3mm; margin: 1.5mm 0 1mm; }
 .post { flex: 1; background: #f3f1ee; border-radius: 3px; padding: 2mm; }
-.post img { width: 100%; height: 38mm; object-fit: cover; object-position: top; border-radius: 2px; display: block; margin-bottom: 1.2mm; }
+.post img { width: 100%; height: 33mm; object-fit: cover; object-position: top; border-radius: 2px; display: block; margin-bottom: 1.2mm; }
 .post b { color: #FF4410; }
 .two { display: flex; gap: 5mm; } .two > div { flex: 1; }
 .note { background: #fff3ee; border-left: 3px solid #FF4410; padding: 1.5mm 2.5mm; margin: 1mm 0 2mm; }
@@ -37,11 +37,11 @@ a { color: #c43200; text-decoration: none; }
 
 <h1>AI recept: od Instagram brenda do <span>tri gotove objave</span></h1>
 <div class="sub">Brend: <b>GymBeam Hrvatska – instagram.com/gymbeamhr</b> · kod i svi međurezultati: repozitorij <code>AI_Recept</code> ·
-datum izvršavanja: 25. 11. 2026.</div>
+izvršeno 25.–26. 11. 2026.</div>
 
 <div class="posts">
   <div class="post"><img src="../runs/gymbeam_hr/isporuka/objava_1/kadar_01.png"><b>Objava 1 · karusel (5)</b><br>Edukacija → spremanja i dijeljenja: što sadrži Just Whey (22 g bjelančevina, 6,5 g BCAA, WPC/WPI/WPH, enzimi).</div>
-  <div class="post"><img src="../runs/gymbeam_hr/isporuka/objava_2/kadar_01.png"><b>Objava 2 · slika</b><br>Interakcija → komentari: „Slano ili slatko?” – Proteinski čips (A) ili MoiMüv namaz (B) nakon večernjeg treninga.</div>
+  <div class="post"><img src="../runs/gymbeam_hr/isporuka/objava_2/kadar_01.png"><b>Objava 2 · slika</b><br>Interakcija → komentari: „Slano ili slatko?” – Proteinski čips (Tim Slano) ili MoiMüv namaz (Tim Slatko) nakon večernjeg treninga.</div>
   <div class="post"><img src="../runs/gymbeam_hr/isporuka/objava_3/kadar_01.png"><b>Objava 3 · story (4)</b><br>Interes za kupnju → klik na link: Adventski kalendar (24 iznenađenja, ograničen broj, 81,95 € na dan 25. 11.).</div>
 </div>
 <p><b>Zašto GymBeam:</b> velik webshop s vlastitim proizvodima i javnim strukturiranim podacima (sastav, cijene, recenzije), pa se svaka tvrdnja u objavi može provjeriti; vlastita ambalaža omogućuje provjeru točnosti logotipa i pakiranja. Obrazloženja, opisi (caption), alt tekstovi i izvori za svaku objavu: <code>runs/gymbeam_hr/isporuka/README.md</code>.</p>
@@ -52,9 +52,10 @@ export GEMINI_API_KEY=...        # besplatni ključ: aistudio.google.com/apikey
 python -m recept pokreni --brif brief/gymbeam_hr.yaml --run runs/moj_test --do plan   # stani na planu
 # (pregledaj/uredi runs/moj_test/04_plan.json), zatim:
 python -m recept pokreni --run runs/moj_test                                           # nastavi do kraja</pre>
-<p><b>Postavke</b> (<code>config.example.yaml</code>): provider <code>gemini</code> / <code>openai</code> (bilo koji OpenAI-kompatibilni API) /
-<code>manual</code> (bez ključa – svaki AI korak zapiše prompt u datoteku, korisnik ga zalijepi u ChatGPT/Gemini/Claude i spremi odgovor),
-lista modela po prioritetu, automatski popravak nakon provjere. <b>Novi brend:</b> <code>python -m recept brif</code> (interaktivni brifing: web, proizvodi,
+<p><b>Postavke</b> (<code>config.example.yaml</code>): lanac besplatnih pružatelja (Gemini → Groq → OpenRouter → Gemini lite; ključevi
+<code>GEMINI_API_KEY</code>, <code>GROQ_API_KEY</code>, <code>OPENROUTER_API_KEY</code>, dovoljan je i samo prvi) ili <code>manual</code> (bez ključa – svaki AI
+korak zapiše prompt u datoteku, korisnik ga zalijepi u ChatGPT/Gemini/Claude i spremi odgovor); automatski popravak nakon provjere;
+<code>python -m recept scene</code> priprema promptove za AI pozadinske scene. <b>Novi brend:</b> <code>python -m recept brif</code> (interaktivni brifing: web, proizvodi,
 publika, ciljevi, uzori, snimke Instagrama) ili kopija <code>brief/gymbeam_hr.yaml</code>. <b>Ljudske radnje:</b> pregled plana, pregled gotovih objava
 i (po potrebi) dorade zapisane u YAML (<code>python -m recept dorada</code>). Ključevi nisu u repozitoriju (<code>.env.example</code>).</p>
 
@@ -75,15 +76,15 @@ i (po potrebi) dorade zapisane u YAML (<code>python -m recept dorada</code>). Kl
 <h2>3. Ključne odluke</h2>
 <ul>
 <li><b>Ambalaža se ne generira.</b> AI generatori slika iskrivljuju etikete i logotipe; zato se koriste službene fotografije s gymbeam.hr, nepromijenjene (samo se obreže prazni bijeli rub), na bijeloj kartici unutar grafike u bojama brenda (#FF4410, crna, svijetla; boje provjerene u CSS-u stranice, logo je originalni SVG). AI odlučuje o konceptu, rasporedu, tekstu i provjeri.</li>
-<li><b>Besplatno i ponovljivo:</b> Gemini API na besplatnom sloju preko OpenAI-kompatibilnog endpointa; jer su besplatni modeli često preopterećeni (HTTP 503) ili potroše dnevnu kvotu (429), recept kruži kroz listu modela. Ručni način rada omogućuje izvršavanje samo s chat pretplatom.</li>
-<li><b>Instagram se ne scrapea</b> (zahtijeva prijavu). Recept prima snimke zaslona profila kao ulaz za vision analizu; u ovom pokretanju nisu priložene, pa ih analiza izričito navodi kao nedostupan izvor, a zaključke o feedu kao pretpostavke.</li>
+<li><b>Besplatno i ponovljivo:</b> besplatni modeli su često preopterećeni (503) ili potroše dnevnu kvotu (429; Gemini 3.6 ≈ 20 zahtjeva/dan), pa recept kruži kroz lanac pružatelja i modela; koraci sa slikama koriste samo modele koji ih primaju. Kandidati su testirani na istom hrvatskom zadatku: Groq gpt-oss-120b i Gemma 4 ušli su u lanac, Qwen (gramatičke greške) i Nemotron (piše srpski) nisu. Za slike je isproban Hugging Face (besplatni modeli ukinuti – 410, ostali traže kredite – 402) i Pollinations (vodeni žig, niska rezolucija), pa su AI scene ručni korak u ChatGPT-u.</li>
+<li><b>Instagram kroz snimke zaslona</b> (bez prijave se ne može čitati, a scraping nije dopušten). Vision analiza dviju snimki (bio i mreža objava) utvrdila je: brend piše s „vi” („Pratite nas”, „Uživajte u besplatnoj dostavi”), feed su gotovo isključivo reelsi s ljudima (UGC, kuhinja, teretana), istaknute priče Zajednica · Novosti · Članci · Recepti · Outfiti, povremeno AI-stilizirani vizuali. Statični karusel, slika i story su zato svjesna dopuna feedu (edukacija za spremanje → „Članci”), a reels s osobama je prijedlog za sljedeću verziju.</li>
 <li><b>Činjenice samo iz izvora,</b> provjereno kodom, ne samo promptom: brojke iz teksta objava uspoređuju se s brojkama iz izvora; cijene uvijek s datumom provjere (trenutačno traje Black Friday).</li>
 <li><b>Opcionalne AI scene:</b> izrada predlaže prompt za pozadinsku scenu; slika generirana u ChatGPT-u/Geminiju i spremljena u <code>ai_slike/objavaN_kadarM.png</code> postaje pozadina kadra, a proizvod i logo i dalje dolaze iz originalnih datoteka.</li>
 </ul>
 
 <h2>4. Provjera rezultata i vlastite dorade</h2>
-<p>Sve tri objave prolaze determinističke provjere (0 grešaka, 0 upozorenja) i AI kritiku (brend, jasnoća, cilj, jezik, činjenice). AI kritičar je u objavi 1 sam ispravio „Pored” → „Osim”. Ručno sam provjerio svaku tvrdnju pretraživanjem izvora (npr. „niži udio laktoze”, „bez punila”, „keksi”, „45 × 32 × 22 cm”, „8,4 g po vrećici” – sve doslovno na stranicama proizvoda).</p>
-<div class="note"><b>Konkretan primjer dorade AI prijedloga.</b> U planu je AI za Just Whey napisao „enzimi … za ugodnu probavu <i>bez nadutosti</i>”. Riječ „nadutost” ne postoji na stranici proizvoda – to je zdravstvena tvrdnja bez izvora. Uklonio sam je iz plana, ali je model u izradi ponovno uveo isti smisao („Zabrinut si zbog težine u želucu nakon shakera?”, nadnaslov „Lakša probava”). Zato dorada nije ostala samo ručna: (1) caption i kadar 5 prepisani su na doslovni sastav iz izvora („šest probavnih enzima – pet u kompleksu DigeZyme® te bromelain”), zapisano u <code>runs/gymbeam_hr/dorade.yaml</code> i primijenjeno naredbom <code>dorada</code>; (2) u <code>provjera.py</code> dodan je popis rizičnih izraza (nadut, želuc, lakša probava, mršav, detoks…) koji se označavaju ako ih nema u izvoru; (3) pravilo je dodano u prompt za izradu. Ostale dorade: #ishrana → #prehrana, format cijene „26,95 €”, nadnaslov usklađen s brojkom na kadru. Sve s obrazloženjem u <code>ljudske_dorade.md</code>.</div>
+<p>Sve tri objave prolaze determinističke provjere (brojke, zdravstvene tvrdnje, oblik obraćanja, duljine, prelijevanje teksta; 0 grešaka) i AI kritiku (brend, jasnoća, cilj, jezik, činjenice). Provjera je uhvatila gumb „Kupi na webshopu”, a AI kritičar ga je ispravio u „Kupite”. Ručno sam provjerio svaku tvrdnju pretraživanjem izvora (npr. „niži udio laktoze”, „kompleks tvrtke Sabinsa”, „bromelain iz ananasa”, „novih više neće biti” – sve doslovno na stranicama).</p>
+<div class="note"><b>Konkretan primjer dorade AI prijedloga.</b> U planu je AI za Just Whey napisao „enzimi … za ugodnu probavu <i>bez nadutosti</i>”. Riječ „nadutost” ne postoji na stranici proizvoda – to je zdravstvena tvrdnja bez izvora. Uklonio sam je iz plana, ali je model u izradi ponovno uveo isti smisao („Zabrinut si zbog težine u želucu nakon shakera?”, nadnaslov „Lakša probava”). Zato dorada nije ostala samo ručna: (1) caption i kadar 5 prepisani su na doslovni sastav iz izvora („šest probavnih enzima – pet u kompleksu DigeZyme® te bromelain”), zapisano u <code>runs/gymbeam_hr/dorade.yaml</code> i primijenjeno naredbom <code>dorada</code>; (2) u <code>provjera.py</code> dodan je popis rizičnih izraza (nadut, želuc, lakša probava, mršav, detoks…) koji se označavaju ako ih nema u izvoru; (3) pravilo je dodano u prompt za izradu. <br><b>Drugi primjer – ti → vi.</b> Brif je pretpostavio ti-formu; analiza snimki pokazala je da brend piše s „vi”. Ispravak brifa nije bio dovoljan: izrada je i dalje pisala „Spremi”, „tvoj”, jer joj kod nije prosljeđivao utvrđeni oblik, a primjeri u promptu bili su u ti-formi. Popravljen je kod, prompt i dodana provjera ti-forme; ručno su još ispravljeni „Osigurajte <i>vaš</i>” → „svoj”, veliko „Vi” u opisu → „vi” i parafraza „podrška za zimske dane” → doslovno „najkorisniji zimi”. Sve s obrazloženjem u <code>ljudske_dorade.md</code> i <code>dorade.yaml</code>.</div>
 <p><b>Druge odluke nastale pregledom:</b> glavne fotografije Just Wheya na webu su promotivni banneri (protein + majica na poklon) – objava bi implicirala tu akciju, pa brif bira čiste packshote okusa iz galerije (<code>slike_uzorak</code>); 4. fotografija namaza prikazuje proizvode drugih brendova pa je isključena; pokušaj automatskog izrezivanja pozadine brisao je bijele dijelove etiketa (MoiMüv), pa je odbačen u korist bijele kartice.</p>
 
 <div class="two"><div>
@@ -91,19 +92,19 @@ i (po potrebi) dorade zapisane u YAML (<code>python -m recept dorada</code>). Kl
 <ul>
 <li>Pri ponavljanju variraju tekstovi, raspored kadrova i odabir fotografija; stalni su boje, logo, ambalaža, pravila o činjenicama i formati. Plan može odabrati druge proizvode iz brifa.</li>
 <li>Cijene i ponuda se mijenjaju (Black Friday, rasprodaja kalendara) – zato datum uz cijenu; za kasnije pokretanje cijene se ponovno dohvaćaju.</li>
-<li>Kvaliteta ovisi o dostupnom modelu: kad su jači modeli preopterećeni, pišu „lite” modeli (objave 1 i 2 u prvoj verziji) – slabiji izbor rasporeda, zbog čega je objava 2 ponovno generirana. Lite kritičar je blag (ocjene 10/10); deterministička pravila su pouzdanija od AI ocjene.</li>
-<li>Bez snimki Instagrama analiza feeda je pretpostavka; nema fotografija osoba ni videa (reelsa).</li>
+<li>Kvaliteta ovisi o dostupnom modelu: kad su jači modeli zauzeti, pišu rezervni (lite modeli su u prvoj verziji izabrali krivi raspored za objavu 2). AI kritičar je blag (ocjene 9–10); deterministička pravila su pouzdanija od AI ocjene.</li>
+<li>Analiza Instagrama temelji se na dvije snimke (bez videa i statistike); objave nemaju osobe ni reels.</li>
 <li>Selektori webshopa (schema.org) rade za Magento/Shopify-tip trgovina; za druge stranice treba prilagoditi <code>scrape.py</code>.</li>
 </ul>
 <h2>6. Utrošeno vrijeme</h2>
-<p>Aktivni rad: ≈ 3 h – izrada koda, promptova i predloška uz Claude Code, pregled i dorade. Čekanje na generiranje: 17 AI poziva, ukupno ≈ 6,5 min (faze: opis slika 70 s, analiza 31 s, plan 42 s, izrada 166 s, provjera 108 s); render 8 s.</p>
+<p>Aktivni rad: ≈ 3 h – izrada koda, promptova i predloška uz Claude Code, pregled i dorade. Čekanje na generiranje (obje verzije, ti i vi): 31 AI poziv, ukupno ≈ 13 min (najviše izrada i provjera, pojedini poziv 5–110 s); render ≈ 8 s po verziji.</p>
 </div><div>
 <h2>7. Prijedlog unapređenja: učenje iz odobrenja i rezultata</h2>
 <ul>
 <li><b>Podaci:</b> (a) ljudske dorade (<code>dorade.yaml</code> – staro/novo/razlog) i odbijeni planovi; (b) Instagram Graph API Insights po objavi: doseg, spremanja, dijeljenja, komentari, klikovi na link/naljepnicu, zadržavanje po story kadru; (c) sadržaj komentara (pitanja, A/B glasovi, sentiment).</li>
 <li><b>Što se mijenja:</b> dorade se automatski sažimaju u <i>pravila brenda</i> (npr. „bez tvrdnji o probavi”) koja se dodaju u sustavski prompt i u deterministički popis provjera; najbolje objave po cilju (npr. spremanja/doseg za edukaciju) ulaze u banku primjera za few-shot; planer dobiva statistiku koji formati, rasporedi i teme ostvaruju koji cilj; pitanja iz komentara postaju teme sljedećih edukativnih objava.</li>
 <li><b>Kako znati da je nova verzija bolja:</b> offline – fiksni skup brifova (više brendova) i usporedba stare i nove verzije: broj pogrešaka determinističkih provjera, broj potrebnih ljudskih dorada, slijepa ljudska usporedba parova i AI ocjenjivač s rubrikom; online – A/B (npr. dvije naslovne varijante kroz Trial Reels ili izmjenično objavljivanje) i praćenje metrike cilja normalizirane dosegom (spremanja/doseg, komentari/doseg, CTR) kroz najmanje 8–10 objava prema prosjeku profila. Nova verzija se prihvaća samo ako ne povećava broj činjeničnih grešaka.</li>
-<li><b>Ostalo:</b> reels iz istih kadrova (animacija + glazba), više snimki IG kao obavezan ulaz, automatski raspored objava.</li>
+<li><b>Ostalo:</b> reels s osobama ili iz istih kadrova (animacija + glazba), više snimki IG kao obavezan ulaz.</li>
 </ul>
 </div></div>
 </body>

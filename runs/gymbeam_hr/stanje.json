@@ -40,8 +40,8 @@
     "izlaz": "07_provjera.json"
   },
   "isporuka": {
-    "zavrseno": "2026-11-26 08:42:11",
-    "sekundi": 0.5,
+    "zavrseno": "2026-11-26 08:44:05",
+    "sekundi": 0.4,
     "izlaz": "isporuka/README.md"
   }
 }

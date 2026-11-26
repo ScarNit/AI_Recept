@@ -60,17 +60,15 @@ Spremite ovu objavu kako biste imali vodič pri ruci pri sljedećem odabiru i po
 **Opis objave (caption):**
 
 ```
-Završili ste kasni trening i otvarate kuhinjske ormariće. Što prvo birate – hrskavo slano ili kremasto slatko?
+Završili ste kasni trening i otvarate kuhinjske ormariće. Što prvo birate – hrskavo slano ili kremasto slatko? 🤔
 
-Vječna dilema nakon večernjeg treninga ne mora značiti kompromis s vašim fit ciljevima. Za vas smo pripremili dvije odlične opcije:
+Ako ste u Timu Slano, tu je Proteinski čips. Priprema se ekspandiranjem vrućim zrakom i sadrži manje od 10 % masti, a u 100 g ima 21 g biljnih proteina.
 
-Ako ste u Timu Slano, tu je Proteinski čips. Priprema se ekspandiranjem vrućim zrakom i sadrži manje od 10 % masti, pa možete uživati u hrskanju bez brige.
+Ako glasate za Tim Slatko, vaš je favorit MoiMüv Proteinski namaz. Izvor je proteina, ne sadrži dodani šećer i odlično ide na palačinke, tost ili ravno sa žlice.
 
-Ako ipak glasate za Tim Slatko, vaš favorit je MoiMüv Proteinski namaz. Izvor je proteina i ne sadrži dodani šećer, a odlično se uklapa na palačinke, tost ili direktno na žlicu.
+Nema krivog odgovora! Napišite nam u komentar – Tim Slano ili Tim Slatko? 👇
 
-Nema krivog odgovora! Napišite nam u komentarima – jeste li Tim Slano ili Tim Slatko?
-
-#gymbeam #gymbeamhr #fitprehrana #proteinskicips #moimuv #fitnesshrvatska #zdravisnack #slanoilislatko
+#gymbeam #gymbeamhr #fitprehrana #proteinskičips #moimuv #fitnesshrvatska #proteinskisnack #slanoilislatko
 ```
 
 **Alt tekstovi:**
@@ -99,23 +97,25 @@ Nema krivog odgovora! Napišite nam u komentarima – jeste li Tim Slano ili Tim
 **Opis objave (caption):**
 
 ```
-Jingle Bells, Jingle Bells... Božić se brzo bliži, a Vi imate 24 razloga za veselje! 🎄✨
+Jingle Bells, Jingle Bells… Božić se brzo bliži, a vi imate 24 razloga za veselje! 🎄✨
 
-Predstavljamo Vam GymBeam Adventski kalendar koji iza svakog od 24 prozorčića skriva iznenađenje za svaki prosinac do Badnjaka. Unutra Vas čekaju naši najpopularniji proizvodi – od proteinskih pločica i hrskavih keksa do vitamina i dodataka prehrani koji će Vam dobro doći u predbožićnoj užurbanosti.
+GymBeam Adventski kalendar iza svakog od 24 prozorčića skriva iznenađenje – za svaki dan do Badnjaka. Unutra vas čekaju naši najpopularniji proizvodi: proteinske pločice, keksi i druge poslastice, vitamini i dodaci prehrani te napitci koji će vam dobro doći u predbožićnoj užurbanosti.
 
-Ovo je ograničena serija i novih količina više neće biti. Ne dopustite da Vam prosinac počne bez Vašeg jutarnjeg fitness rituala!
+Kalendara imamo samo ograničen broj i novih više neće biti, stoga ne čekajte posljednji trenutak.
 
-Kliknite na poveznicu u Storyju i osigurajte svoj kalendar na vrijeme. 🎁
+Cijena: 81,95 € (na gymbeam.hr, 25. 11. 2026.)
+
+Kliknite na poveznicu u storyju i osigurajte svoj kalendar na vrijeme. 🎁
 
 #gymbeam #gymbeamhrvatska #adventskikalendar #fitbozic #fitnessprehrana #dodaciprehrani
 ```
 
 **Alt tekstovi:**
 
-1. Prikaz zelene kutije GymBeam adventskog kalendara s natpisom Merry Fitmas. — naljepnica: {'vrsta': 'anketa', 'pitanje': 'Jeste li spremni za advent?', 'opcije': ['Pretspreman/na!', 'Jedva čekam!']}
+1. Prikaz zelene kutije GymBeam adventskog kalendara s natpisom Merry Fitmas. — naljepnica: {'vrsta': 'anketa', 'pitanje': 'Jeste li spremni za advent?', 'opcije': ['Spreman/na sam!', 'Jedva čekam!']}
 2. Rastvoreni crveno-bijeli adventski kalendar s 24 numerirana pretinca.
 3. Grafički prikaz tri ključne značajke sadržaja adventskog kalendara.
-4. Zelena kutija GymBeam adventskog kalendara uz otvoreni kalendar. — naljepnica: {'vrsta': 'link', 'tekst': 'Kupi kalendar', 'url': 'https://gymbeam.hr/advent-kalendar-gymbeam.html'}
+4. Zelena kutija GymBeam adventskog kalendara uz otvoreni kalendar. — naljepnica: {'vrsta': 'link', 'tekst': 'Kupite kalendar', 'url': 'https://gymbeam.hr/advent-kalendar-gymbeam.html'}
 
 **Korištene činjenice i izvori:**
 
